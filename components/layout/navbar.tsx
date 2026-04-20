@@ -43,26 +43,28 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-[86px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3 text-white">
-          <LogoMark />
-          <span className="text-3xl font-extrabold tracking-tight">PlumbFlow</span>
-        </Link>
+        <div className="flex lg:flex-1">
+          <Link href="/" className="flex items-center gap-3 text-white">
+            <LogoMark />
+            <span className="text-3xl font-extrabold tracking-tight">PlumbFlow</span>
+          </Link>
+        </div>
 
-        <div className="hidden items-center gap-10 lg:flex">
-          <ul className="flex items-center gap-10 text-base font-semibold text-white/90">
-            {navigationItems.map((item) => (
-              <li key={item.label}>
-                <a href={item.href} className="inline-flex items-center gap-1 transition hover:text-white">
-                  <span>{item.label}</span>
-                  {item.hasDropdown ? <ChevronDownIcon className="h-4 w-4" /> : null}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <ul className="hidden items-center gap-10 text-base font-semibold text-white/90 lg:flex">
+          {navigationItems.map((item) => (
+            <li key={item.label}>
+              <a href={item.href} className="inline-flex items-center gap-1 transition hover:text-white">
+                <span>{item.label}</span>
+                {item.hasDropdown ? <ChevronDownIcon className="h-4 w-4" /> : null}
+              </a>
+            </li>
+          ))}
+        </ul>
 
+        <div className="flex items-center justify-end gap-10 lg:flex-1">
           <a
             href="tel:+11245678900"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-4 text-base font-bold text-white shadow-[0_16px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)]"
+            className="hidden items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-4 text-base font-bold text-white shadow-[0_16px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)] lg:inline-flex"
           >
             <PhoneIcon className="h-4 w-4" />
             <span>(124) 567 8900</span>
