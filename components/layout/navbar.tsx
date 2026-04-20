@@ -8,6 +8,7 @@ import { LogoMark } from "@/components/ui/logo-mark";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(false);
   const [hasPassedHero, setHasPassedHero] = useState(false);
   const navbarHeight = 86;
 
@@ -16,11 +17,14 @@ export function Navbar() {
       const hero = document.getElementById("home-hero");
 
       if (!hero) {
+        setIsAtTop(false);
         setHasPassedHero(false);
         return;
       }
 
       const heroBottom = hero.getBoundingClientRect().bottom;
+      // 128px = TopBar (42px) + Navbar (86px)
+      setIsAtTop(heroBottom <= 128);
       setHasPassedHero(heroBottom <= navbarHeight);
     };
 
@@ -36,10 +40,12 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
+      className={`fixed inset-x-0 z-40 transition-all duration-300 ${
+        isAtTop ? "top-0" : "top-0 lg:top-[42px]"
+      } ${
         hasPassedHero
-          ? "border-b border-[#294760] bg-[var(--color-navy)] shadow-[0_14px_32px_rgba(8,17,29,0.18)]"
-          : "bg-transparent lg:top-[42px]"
+          ? "bg-[var(--color-navy)] shadow-[0_14px_32px_rgba(8,17,29,0.18)]"
+          : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex h-[86px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">

@@ -69,11 +69,11 @@ export function TestimonialsSection() {
           </h2>
         </div>
 
-        <div className={`mt-14 grid gap-8 ${isDesktop ? "lg:grid-cols-2" : ""}`}>
+        <div className={`mt-14 grid items-stretch gap-8 ${isDesktop ? "lg:grid-cols-2" : ""}`}>
           {visibleTestimonials.map((testimonial) => (
             <article
               key={testimonial.id}
-              className="rounded-[2rem] bg-white px-7 py-8 text-[#18344f] shadow-[0_24px_60px_rgba(9,20,32,0.16)] sm:px-9 sm:py-10"
+              className="flex h-full flex-col rounded-[2rem] bg-white px-7 py-8 text-[#18344f] shadow-[0_24px_60px_rgba(9,20,32,0.16)] sm:px-9 sm:py-10"
             >
               <div className="flex items-center gap-2 text-[var(--color-accent)]">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -81,7 +81,7 @@ export function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="mt-7 text-[1.05rem] leading-9 text-[#18344f] sm:text-[1.1rem]">
+              <p className="mt-7 grow text-[1.05rem] leading-9 text-[#18344f] sm:text-[1.1rem]">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 

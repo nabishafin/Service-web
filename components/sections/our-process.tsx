@@ -176,7 +176,7 @@ export function OurProcess() {
                     variants={isLeft ? leftCardVariants : rightCardVariants}
                   >
                     <div
-                      className={`rounded-2xl bg-[#0f3048] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25)] sm:p-8 ${
+                      className={`flex min-h-[200px] flex-col rounded-2xl bg-[#0f3048] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25)] sm:p-8 ${
                         isLeft ? "lg:mr-auto lg:ml-0" : "lg:ml-auto lg:mr-0"
                       } max-w-md ${isLeft ? "lg:ml-auto" : "lg:mr-auto"}`}
                     >
@@ -191,7 +191,7 @@ export function OurProcess() {
                       </h3>
 
                       {/* Description */}
-                      <p className="mt-3 text-sm leading-relaxed text-[#94a3b8] sm:text-base">
+                      <p className="mt-3 grow text-sm leading-relaxed text-[#94a3b8] sm:text-base">
                         {step.description}
                       </p>
                     </div>
