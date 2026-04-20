@@ -6,14 +6,14 @@ export function ContactSection() {
   return (
     <section id="contact-us" className="relative flex flex-col">
       {/* Top Dark Background Segment */}
-      <div className="relative h-[25rem] w-full bg-[#0a1622] sm:h-[28rem]">
+      <div className="relative h-[32rem] w-full bg-[#0a1622] sm:h-[38rem]">
         <Image
           src="/images/EM4AaWEyJ9wPPFWwzQyNNn56cU.png"
           alt="Contact background"
           fill
           className="object-cover opacity-95"
         />
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-start px-4 pt-20 text-center sm:px-6 sm:pt-24 lg:px-8">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-start px-4 pt-28 text-center sm:px-6 sm:pt-36 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.1em] text-[#ff6017]">
             Contact Us
           </p>
