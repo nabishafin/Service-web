@@ -9,8 +9,8 @@ const iconMap = {
 
 export function TopBar() {
   return (
-    <div className="hidden border-b border-white/10 bg-[var(--color-navy)] text-white lg:block">
-      <div className="mx-auto flex max-w-7xl items-center justify-end gap-6 px-6 py-2 text-sm font-medium">
+    <div className="fixed inset-x-0 top-0 z-50 hidden border-b border-white/10 bg-[var(--color-navy)] text-white lg:block">
+      <div className="mx-auto flex h-[42px] max-w-7xl items-center justify-end gap-6 px-6 text-sm font-medium">
         {contactItems.map((item) => {
           const Icon = iconMap[item.type];
 
@@ -25,4 +25,3 @@ export function TopBar() {
     </div>
   );
 }
-

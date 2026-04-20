@@ -92,7 +92,7 @@ function RecognitionPanel() {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-44px)] overflow-hidden bg-slate-950 text-white">
+    <section id="home-hero" className="relative min-h-[calc(100vh-44px)] overflow-hidden bg-slate-950 text-white">
       <Image
         src="/images/6hZX53cd2BQPBn5f2U9LrdEHxw.png"
         alt="Plumber repairing a kitchen faucet"

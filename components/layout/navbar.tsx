@@ -1,17 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navigationItems } from "@/lib/site-data";
 import { ChevronDownIcon, CloseIcon, MenuIcon, PhoneIcon } from "@/components/ui/icons";
 import { LogoMark } from "@/components/ui/logo-mark";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasPassedHero, setHasPassedHero] = useState(false);
+  const desktopTopBarHeight = 42;
+  const navbarHeight = 86;
+
+  useEffect(() => {
+    const updateNavbarState = () => {
+      const hero = document.getElementById("home-hero");
+
+      if (!hero) {
+        setHasPassedHero(false);
+        return;
+      }
+
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      const desktopOffset = window.innerWidth >= 1024 ? desktopTopBarHeight + navbarHeight : navbarHeight;
+      setHasPassedHero(heroBottom <= desktopOffset);
+    };
+
+    updateNavbarState();
+    window.addEventListener("scroll", updateNavbarState, { passive: true });
+    window.addEventListener("resize", updateNavbarState);
+
+    return () => {
+      window.removeEventListener("scroll", updateNavbarState);
+      window.removeEventListener("resize", updateNavbarState);
+    };
+  }, []);
 
   return (
-    <header className="relative z-20">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 lg:top-[42px] ${
+        hasPassedHero
+          ? "border-b border-[#294760] bg-[var(--color-navy)] shadow-[0_14px_32px_rgba(8,17,29,0.18)]"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex h-[86px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3 text-white">
           <LogoMark />
           <span className="text-3xl font-extrabold tracking-tight">PlumbFlow</span>
@@ -42,7 +75,9 @@ export function Navbar() {
           type="button"
           aria-expanded={menuOpen}
           aria-label="Toggle navigation menu"
-          className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur lg:hidden"
+          className={`inline-flex h-12 w-12 items-center justify-center rounded-full border text-white backdrop-blur lg:hidden ${
+            hasPassedHero ? "border-white/10 bg-white/10" : "border-white/20 bg-white/10"
+          }`}
           onClick={() => setMenuOpen((current) => !current)}
         >
           {menuOpen ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
@@ -50,7 +85,7 @@ export function Navbar() {
       </nav>
 
       {menuOpen ? (
-        <div className="mx-4 rounded-[28px] border border-white/15 bg-slate-950/95 p-5 text-white shadow-2xl backdrop-blur lg:hidden">
+        <div className="mx-4 mb-4 rounded-[28px] border border-white/15 bg-slate-950/95 p-5 text-white shadow-2xl backdrop-blur lg:hidden">
           <ul className="space-y-4 text-lg font-semibold">
             {navigationItems.map((item) => (
               <li key={item.label}>

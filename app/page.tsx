@@ -7,10 +7,8 @@ export default function Home() {
   return (
     <main>
       <TopBar />
+      <Navbar />
       <div className="relative">
-        <div className="absolute inset-x-0 top-0">
-          <Navbar />
-        </div>
         <HeroSection />
       </div>
       <QuickBookingSection />
