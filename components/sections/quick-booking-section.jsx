@@ -1,7 +1,7 @@
 export function QuickBookingSection() {
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[81.25rem]">
+    <section className="bg-white py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-[1.35rem] border border-[#d8deea] bg-[#f3f5fc] px-8 py-10 shadow-[0_18px_50px_rgba(16,24,40,0.06)] lg:px-16">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="max-w-[25rem]">

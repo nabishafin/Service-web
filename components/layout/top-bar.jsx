@@ -44,8 +44,9 @@ export function TopBar() {
           : "pointer-events-none -translate-y-full opacity-0"
       }`}
     >
-      <div className="mx-auto flex h-[42px] max-w-7xl items-center justify-end gap-6 px-6 text-sm font-medium">
-        {contactItems.map((item) => {
+      <div className="w-full">
+        <div className="mx-auto flex h-[42px] max-w-7xl items-center justify-end gap-6 px-4 sm:px-6 lg:px-8 text-sm font-medium">
+          {contactItems.map((item) => {
           const Icon = iconMap[item.type];
 
           return (
@@ -55,6 +56,7 @@ export function TopBar() {
             </a>
           );
         })}
+        </div>
       </div>
     </div>
   );

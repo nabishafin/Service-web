@@ -104,7 +104,8 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,14,24,0.92)_0%,rgba(7,14,24,0.76)_32%,rgba(7,14,24,0.22)_63%,rgba(7,14,24,0.06)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_30%)]" />
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-42px)] max-w-7xl items-center px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24">
+      <div className="relative mx-auto flex min-h-[calc(100vh-42px)] w-full items-center pb-16 pt-14 lg:pb-24">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className=" mt-16 text-md font-semibold text-[#ff6017] sm:text-xl">Your Trusted Plumbing Experts</p>
 
@@ -175,9 +176,16 @@ export function HeroSection() {
             </span>
           </div>
         </div>
+        </div>
       </div>
 
-      <RecognitionPanel />
+      <div className="pointer-events-none absolute inset-0 mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto h-full w-full max-w-7xl">
+          <div className="pointer-events-auto">
+            <RecognitionPanel />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

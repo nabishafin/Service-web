@@ -77,8 +77,8 @@ export function AboutSection() {
   );
 
   return (
-    <section ref={sectionRef} className="bg-white px-4 py-18 sm:px-6 sm:py-22 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+    <section ref={sectionRef} className="bg-white py-18 sm:py-22 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
           <div className="overflow-hidden rounded-[2rem] bg-[#eef2f7]">
             <Image

@@ -37,8 +37,8 @@ const projects = [
 
 export function ServiceGallerySection() {
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-white py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-sm font-bold uppercase tracking-widest text-[#ff6017] sm:text-base">
             OUR SERVICE

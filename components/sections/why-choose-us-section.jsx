@@ -34,8 +34,8 @@ export function WhyChooseUsSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="bg-white px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-white py-10 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-sm font-bold uppercase tracking-widest text-[#ff6017] sm:text-base">
             WHY CHOOSE US

@@ -115,7 +115,7 @@ export function OurProcess() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white" />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           className="text-center"

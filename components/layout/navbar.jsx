@@ -48,8 +48,9 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-[86px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex lg:flex-1">
+      <nav className="mx-auto h-[86px] w-full">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3 text-white">
             <LogoMark />
             <span className="text-3xl font-extrabold tracking-tight">PlumbFlow</span>
@@ -87,7 +88,8 @@ export function Navbar() {
           onClick={() => setMenuOpen((current) => !current)}
         >
           {menuOpen ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
-        </button>
+          </button>
+        </div>
       </nav>
 
       {menuOpen ? (
