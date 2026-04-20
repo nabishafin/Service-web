@@ -110,11 +110,10 @@ export function AboutSection() {
                   <button
                     key={tab.id}
                     type="button"
-                    className={`border px-8 py-4 text-left text-xl font-bold transition sm:flex-1 sm:text-center ${
-                      isActive
-                        ? "border-[#18344f] text-[var(--color-accent)]"
-                        : "border-transparent text-[#18344f]"
-                    }`}
+                    className={`border px-8 py-4 text-left text-xl font-bold transition sm:flex-1 sm:text-center ${isActive
+                      ? "border-[#18344f] text-[var(--color-accent)]"
+                      : "border-transparent text-[#18344f]"
+                      }`}
                     onClick={() => setActiveTab(tab.id)}
                   >
                     {tab.label}
