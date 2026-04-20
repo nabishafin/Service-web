@@ -92,19 +92,19 @@ function RecognitionPanel() {
 
 export function HeroSection() {
   return (
-    <section id="home-hero" className="relative min-h-[550px] sm:min-h-[700px] lg:min-h-[900px] overflow-hidden bg-slate-950 text-white">
+    <section id="home-hero" className="relative min-h-[600px] sm:min-h-[800px] lg:min-h-[1050px] overflow-hidden bg-slate-950 text-white">
       <Image
         src="/images/6hZX53cd2BQPBn5f2U9LrdEHxw.png"
         alt="Plumber repairing a kitchen faucet"
         fill
         priority
-        className="object-cover object-[right_center] lg:object-right"
+        className="object-cover object-[right_top]"
       />
 
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,14,24,0.92)_0%,rgba(7,14,24,0.76)_32%,rgba(7,14,24,0.22)_63%,rgba(7,14,24,0.06)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,14,24,0.85)_0%,rgba(7,14,24,0.65)_32%,rgba(7,14,24,0.15)_63%,rgba(7,14,24,0.02)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent_30%)]" />
 
-      <div className="relative mx-auto flex min-h-[550px] sm:min-h-[700px] lg:min-h-[900px] w-full items-center pb-16 pt-14 lg:pb-24">
+      <div className="relative mx-auto flex min-h-[600px] sm:min-h-[800px] lg:min-h-[1050px] w-full items-center pb-16 pt-14 lg:pb-24">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className=" mt-16 text-md font-semibold text-[#ff6017] sm:text-xl">Your Trusted Plumbing Experts</p>
