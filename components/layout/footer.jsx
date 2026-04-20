@@ -16,7 +16,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0a1622] text-white">
+    <footer className="bg-[var(--color-navy)] text-white">
       {/* Emergency CTA Bar */}
       <div className="border-b border-white/5 py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export function Footer() {
             </h2>
             <a
               href="tel:+11245678900"
-              className="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-[#ff6017] px-8 text-lg font-bold text-white shadow-[0_12px_24px_rgba(255,96,23,0.3)] transition hover:bg-[#e85614]"
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-[var(--color-accent)] px-8 text-lg font-bold text-white shadow-[0_12px_24px_rgba(255,96,23,0.3)] transition hover:bg-[var(--color-accent-strong)]"
             >
               <PhoneIcon className="h-5 w-5" />
               <span>(124) 567 8900</span>
@@ -92,15 +92,15 @@ export function Footer() {
               <h3 className="mb-8 text-lg font-bold text-white">Contact Us</h3>
               <ul className="space-y-6 text-base font-medium text-gray-400">
                 <li className="flex gap-4">
-                  <MapPinIcon className="h-6 w-6 shrink-0 text-[#ff6017]" />
+                  <MapPinIcon className="h-6 w-6 shrink-0 text-[var(--color-accent)]" />
                   <span>123 Main Street, Your City, State, ZIP</span>
                 </li>
                 <li className="flex gap-4">
-                  <MailIcon className="h-5 w-5 shrink-0 text-[#ff6017]" />
+                  <MailIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" />
                   <a href="mailto:contact@plumbflow.com" className="transition hover:text-white">contact@plumbflow.com</a>
                 </li>
                 <li className="flex gap-4">
-                  <PhoneIcon className="h-5 w-5 shrink-0 text-[#ff6017]" />
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" />
                   <a href="tel:+11234567890" className="transition hover:text-white">(123) 456-7890</a>
                 </li>
               </ul>

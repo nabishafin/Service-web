@@ -10,6 +10,7 @@ import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section"
 import { ServiceGallerySection } from "@/components/sections/service-gallery-section";
 import { BlogSection } from "@/components/sections/blog-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <ServiceGallerySection />
       <ContactSection />
       <BlogSection />
+      <Footer />
     </main>
   );
 }

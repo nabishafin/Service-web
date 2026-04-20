@@ -9,7 +9,7 @@ const avatarItems = [
 
 function RecognitionPanel() {
   return (
-    <div className="absolute bottom-0 right-0 hidden w-full max-w-[33rem] rounded-tl-[28px] border border-white/35 bg-[linear-gradient(90deg,rgba(201,194,189,0.62)_0%,rgba(44,63,90,0.82)_100%)] px-6 pb-5 pt-5 shadow-[0_24px_70px_rgba(0,0,0,0.24)] backdrop-blur-[10px] xl:block">
+    <div className="absolute bottom-0 right-0 hidden w-full max-w-[33rem] rounded-tl-2xl border border-white/35 bg-[linear-gradient(90deg,rgba(201,194,189,0.62)_0%,rgba(44,63,90,0.82)_100%)] px-6 pb-5 pt-5 shadow-[0_24px_70px_rgba(0,0,0,0.24)] backdrop-blur-[10px] xl:block">
       <p className="max-w-[28rem] text-[1.1rem] font-extrabold leading-[1.15] tracking-[-0.03em] text-white">
         Recognized for Excellence in Plumbing Services!
       </p>
@@ -107,7 +107,7 @@ export function HeroSection() {
       <div className="relative mx-auto flex min-h-[600px] sm:min-h-[800px] lg:min-h-[1050px] w-full items-center pb-16 pt-14 lg:pb-24">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <p className=" mt-16 text-md font-semibold text-[#ff6017] sm:text-xl">Your Trusted Plumbing Experts</p>
+          <p className=" mt-16 text-md font-semibold text-[var(--color-accent)] sm:text-xl">Your Trusted Plumbing Experts</p>
 
           <h1 className="mt-6 max-w-xl text-5xl font-extrabold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
             Fast Solutions for Plumbing Problems
@@ -121,7 +121,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#quote"
-              className="inline-flex items-center justify-center rounded-full bg-[#ff6017] px-8 py-4 text-lg font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[#ff6017]"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-8 py-4 text-lg font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)]"
             >
               Get a Free Quote
             </a>

@@ -37,14 +37,14 @@ const projects = [
 
 export function ServiceGallerySection() {
   return (
-    <section className="bg-white py-20 lg:py-24">
+    <section className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#ff6017] sm:text-base">
-            OUR SERVICE
+          <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+            Recent Projects
           </p>
-          <h2 className="mt-4 text-[2rem] font-semibold tracking-tight leading-tight text-[#18344f] sm:text-[2.75rem] lg:text-[3.2rem]">
-            Quality Plumbing<br />Work You Can Trust
+          <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+            Quality Workmanship in Every Installation
           </h2>
         </div>
 
@@ -52,7 +52,7 @@ export function ServiceGallerySection() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className={`relative overflow-hidden rounded-[2rem] group min-h-[20rem] md:min-h-0 shadow-[0_8px_30px_rgba(0,0,0,0.06)] ${project.className}`}
+              className={`relative overflow-hidden rounded-2xl group min-h-[20rem] md:min-h-0 shadow-[0_8px_30px_rgba(0,0,0,0.06)] ${project.className}`}
             >
               <Image
                 src={project.src}

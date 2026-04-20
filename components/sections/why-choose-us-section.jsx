@@ -34,20 +34,20 @@ export function WhyChooseUsSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="bg-white py-10 lg:py-16">
+    <section className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#ff6017] sm:text-base">
-            WHY CHOOSE US
+          <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+            The PlumbFlow Advantage
           </p>
-          <h2 className="mt-4 text-[2rem] font-semibold tracking-tight leading-tight text-[#18344f] sm:text-[2.5rem] lg:text-[2.75rem]">
-            Why PlumbFlow Is Your<br />Trusted Plumbing Partner
+          <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+            Why Homeowners Prefer Our Plumbing Expertise
           </h2>
         </div>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Image & Video Block */}
-          <div className="relative overflow-hidden rounded-[2rem] bg-gray-100 aspect-video shadow-[0_8px_30px_rgba(0,0,0,0.12)] lg:self-center">
+          <div className="relative overflow-hidden rounded-2xl bg-gray-100 aspect-video shadow-[0_8px_30px_rgba(0,0,0,0.12)] lg:self-center">
             {!isVideoPlaying ? (
               <>
                 <Image

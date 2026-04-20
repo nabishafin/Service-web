@@ -60,12 +60,14 @@ export function TestimonialsSection() {
   }, [activeIndex, isDesktop]);
 
   return (
-    <section className="bg-[var(--color-navy)] py-10 text-white sm:py-22 lg:py-24">
+    <section className="bg-[var(--color-navy)] py-20 text-white lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-extrabold text-[var(--color-accent)] sm:text-base">Testimonial</p>
-          <h2 className="mx-auto mt-5 max-w-5xl text-[2.7rem] font-extrabold leading-[1.03] tracking-[-0.06em] text-white sm:text-[3.8rem] lg:text-[4.55rem]">
-            What Our Customers Say
+          <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+            Customer Voice
+          </p>
+          <h2 className="mx-auto mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-white lg:text-[3.25rem]">
+            Trusted by Homeowners Across the Region
           </h2>
         </div>
 
@@ -73,7 +75,7 @@ export function TestimonialsSection() {
           {visibleTestimonials.map((testimonial) => (
             <article
               key={testimonial.id}
-              className="flex h-full flex-col rounded-[2rem] bg-white px-7 py-8 text-[#18344f] shadow-[0_24px_60px_rgba(9,20,32,0.16)] sm:px-9 sm:py-10"
+              className="flex h-full flex-col rounded-2xl bg-white px-7 py-8 text-[#18344f] shadow-[0_24px_60px_rgba(9,20,32,0.16)] sm:px-9 sm:py-10"
             >
               <div className="flex items-center gap-2 text-[var(--color-accent)]">
                 {Array.from({ length: 5 }).map((_, index) => (

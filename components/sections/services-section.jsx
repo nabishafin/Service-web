@@ -35,10 +35,12 @@ export function ServicesSection() {
     <section className="bg-[#f5f7fd] py-18 sm:py-22 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold text-[var(--color-accent)] sm:text-base">Our Service</p>
-            <h2 className="mt-5 max-w-[48rem] text-[2.25rem] font-semibold leading-[1.05] tracking-[-0.04em] text-[#18344f] sm:text-[3rem] lg:text-[3.5rem]">
-              Reliable, Fast, and Expert Plumbing Solutions
+          <div className="max-w-3xl">
+            <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[#ff6017]">
+              Expert Services
+            </p>
+            <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+              Fast & Reliable Solutions for Every Plumbing Need
             </h2>
           </div>
 
@@ -77,7 +79,7 @@ export function ServicesSection() {
             })}
           </div>
 
-          <div className="overflow-hidden rounded-[1.45rem] bg-[#dfe5ee]">
+          <div className="overflow-hidden rounded-2xl bg-[#dfe5ee]">
             <div className="relative min-h-[22rem] sm:min-h-[28rem] lg:min-h-[30.25rem]">
               <Image
                 key={activeService.id}

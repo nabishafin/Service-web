@@ -111,7 +111,7 @@ function CheckIcon({ className }) {
 
 export function OurProcess() {
   return (
-    <section className="relative overflow-hidden bg-white py-10 lg:py-28">
+    <section className="relative overflow-hidden bg-white py-20 lg:py-32">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white" />
 
@@ -124,11 +124,11 @@ export function OurProcess() {
           viewport={{ once: false, margin: "-100px" }}
           variants={headerVariants}
         >
-          <span className="text-sm font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
-            Our Process
+          <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+            How We Work
           </span>
-          <h2 className="mx-auto mt-4 max-w-xl text-[2rem] font-semibold leading-tight tracking-tight text-gray-900 sm:text-[2.25rem] lg:text-[2.75rem]">
-            Fixing Your Plumbing Issues in Just 5 Steps
+          <h2 className="mx-auto mt-4 max-w-2xl text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+            Streamlined Process for Quality Results
           </h2>
 
           {/* CTA Button */}
@@ -175,7 +175,7 @@ export function OurProcess() {
                   >
                     <div
                       className={`flex min-h-[200px] flex-col rounded-2xl bg-[#0f3048] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25)] sm:p-8 ${isLeft ? "lg:mr-auto lg:ml-0" : "lg:ml-auto lg:mr-0"
-                        } max-w-md ${isLeft ? "lg:ml-auto" : "lg:mr-auto"}`}
+                        } max-w-[34rem] ${isLeft ? "lg:ml-auto" : "lg:mr-auto"}`}
                     >
                       {/* Step Number */}
                       <span className="text-3xl font-bold text-[var(--color-accent)] sm:text-4xl">

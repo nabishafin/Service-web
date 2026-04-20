@@ -77,10 +77,10 @@ export function AboutSection() {
   );
 
   return (
-    <section ref={sectionRef} className="bg-white py-18 sm:py-22 lg:py-24">
+    <section ref={sectionRef} className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
-          <div className="overflow-hidden rounded-[2rem] bg-[#eef2f7]">
+          <div className="overflow-hidden rounded-2xl bg-[#eef2f7]">
             <Image
               key={activeContent.id}
               src={activeContent.image.src}
@@ -92,12 +92,12 @@ export function AboutSection() {
           </div>
 
           <div className="pt-2">
-            <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-[var(--color-accent)] sm:text-base">
-              Who We Are
+            <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+              Expertise & Experience
             </p>
 
-            <h2 className="mt-5 max-w-[42rem] text-[2.6rem] font-extrabold leading-[1.04] tracking-[-0.05em] text-[#18344f] sm:text-[3.6rem] lg:text-[4.35rem]">
-              Plumbing Solutions for Every Home
+            <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+              Years of Dedicated Quality Service
             </h2>
 
             <div className="mt-10 flex flex-col border-b border-[#dbe2ea] sm:flex-row">

@@ -1,12 +1,12 @@
 export function QuickBookingSection() {
   return (
-    <section className="bg-white py-20 lg:py-24">
+    <section className="bg-white py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[1.35rem] border border-[#d8deea] bg-[#f3f5fc] px-8 py-10 shadow-[0_18px_50px_rgba(16,24,40,0.06)] lg:px-16">
+        <div className="rounded-2xl border border-[#d8deea] bg-[#f3f5fc] px-8 py-5 shadow-[0_20px_50px_rgba(24,52,79,0.08)] sm:py-6 lg:px-12">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
             <div className="max-w-[25rem]">
-              <h2 className="text-[2rem] font-extrabold leading-[1.06] tracking-[-0.04em] text-[#18344f] sm:text-[2.35rem]">
-                Quick Plumbing Service Book in 60 Seconds.
+              <h2 className="text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[2.25rem]">
+                Professional Service Booked in 60 Seconds
               </h2>
             </div>
 
