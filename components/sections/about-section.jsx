@@ -10,11 +10,6 @@ function AnimatedStat({
   suffix,
   label,
   start,
-}: {
-  value: number;
-  suffix: string;
-  label: string;
-  start: boolean;
 }) {
   const [displayValue, setDisplayValue] = useState(0);
 
@@ -26,7 +21,7 @@ function AnimatedStat({
     const duration = 1400;
     const startTime = performance.now();
 
-    const frame = (time: number) => {
+    const frame = (time) => {
       const progress = Math.min((time - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       setDisplayValue(Math.round(value * eased));
@@ -52,9 +47,9 @@ function AnimatedStat({
 }
 
 export function AboutSection() {
-  const [activeTab, setActiveTab] = useState<(typeof aboutTabs)[number]["id"]>("mission");
+  const [activeTab, setActiveTab] = useState("mission");
   const [hasStartedCount, setHasStartedCount] = useState(false);
-  const sectionRef = useRef<HTMLElement | null>(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const section = sectionRef.current;

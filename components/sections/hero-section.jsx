@@ -2,9 +2,9 @@ import Image from "next/image";
 import { CheckIcon } from "@/components/ui/icons";
 
 const avatarItems = [
-  { type: "image" as const, src: "/images/JcrnwGYRV1uMCIgxw5KS2EzOx0.png", alt: "Happy customer" },
-  { type: "initial" as const, label: "C", color: "from-[#cf915f] to-[#6f4832]" },
-  { type: "initial" as const, label: "R", color: "from-[#c9e3e8] to-[#5a7a80]" },
+  { type: "image", src: "/images/JcrnwGYRV1uMCIgxw5KS2EzOx0.png", alt: "Happy customer" },
+  { type: "initial", label: "C", color: "from-[#cf915f] to-[#6f4832]" },
+  { type: "initial", label: "R", color: "from-[#c9e3e8] to-[#5a7a80]" },
 ];
 
 function RecognitionPanel() {

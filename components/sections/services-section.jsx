@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { serviceItems } from "@/lib/services-data";
 
-function ArrowRightIcon({ className = "" }: { className?: string }) {
+function ArrowRightIcon({ className = "" }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ function ArrowRightIcon({ className = "" }: { className?: string }) {
 
 export function ServicesSection() {
   const [activeServiceId, setActiveServiceId] =
-    useState<(typeof serviceItems)[number]["id"]>("leak-detection");
+    useState("leak-detection");
 
   const activeService = useMemo(
     () => serviceItems.find((service) => service.id === activeServiceId) ?? serviceItems[0],

@@ -20,7 +20,7 @@ function QuoteBadge() {
   );
 }
 
-function BrandMark({ brand }: { brand: "yelp" | "bimota" }) {
+function BrandMark({ brand }) {
   if (brand === "yelp") {
     return <span className="text-[2rem] font-black tracking-[-0.05em] text-[#2d2f33]">yelp*</span>;
   }

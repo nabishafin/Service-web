@@ -52,7 +52,7 @@ const leftCardVariants = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
+      ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
 };
@@ -64,7 +64,7 @@ const rightCardVariants = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
+      ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
 };
@@ -76,7 +76,7 @@ const dotVariants = {
     opacity: 1,
     transition: {
       duration: 0.4,
-      ease: "backOut" as const,
+      ease: "backOut",
     },
   },
 };
@@ -88,12 +88,12 @@ const headerVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut" as const,
+      ease: "easeOut",
     },
   },
 };
 
-function CheckIcon({ className }: { className?: string }) {
+function CheckIcon({ className }) {
   return (
     <svg
       className={className}
