@@ -14,16 +14,16 @@ export function QuickBookingSection() {
               <input
                 type="text"
                 placeholder="Enter your full name"
-                className="h-14 flex-1 rounded-full border border-[#edf0f5] bg-white px-6 text-base text-[#18344f] outline-none placeholder:text-[#6f7c86]"
+                className="w-full rounded-full border border-[#edf0f5] bg-white px-6 py-4 text-base text-[#18344f] outline-none placeholder:text-[#6f7c86] md:h-14 md:flex-1 md:py-0"
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="h-14 flex-1 rounded-full border border-[#edf0f5] bg-white px-6 text-base text-[#18344f] outline-none placeholder:text-[#6f7c86]"
+                className="w-full rounded-full border border-[#edf0f5] bg-white px-6 py-4 text-base text-[#18344f] outline-none placeholder:text-[#6f7c86] md:h-14 md:flex-1 md:py-0"
               />
               <button
                 type="submit"
-                className="inline-flex h-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] px-8 text-base font-bold text-white shadow-[0_14px_30px_rgba(255,111,36,0.28)] transition hover:bg-[var(--color-accent-strong)]"
+                className="inline-flex w-full shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)] px-8 py-4 text-base font-bold text-white shadow-[0_14px_30px_rgba(255,111,36,0.28)] transition hover:bg-[var(--color-accent-strong)] md:h-14 md:w-auto md:py-0"
               >
                 Submit Request
               </button>

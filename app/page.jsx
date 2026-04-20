@@ -8,6 +8,7 @@ import { TopBar } from "@/components/layout/top-bar";
 import { OurProcess } from "@/components/sections/our-process";
 import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section";
 import { ServiceGallerySection } from "@/components/sections/service-gallery-section";
+import { ContactSection } from "@/components/sections/contact-section";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <WhyChooseUsSection />
       <TestimonialsSection />
       <ServiceGallerySection />
+      <ContactSection />
     </main>
   );
 }
