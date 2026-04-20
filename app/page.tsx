@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { QuickBookingSection } from "@/components/sections/quick-booking-section";
+import { ServicesSection } from "@/components/sections/services-section";
 import { Navbar } from "@/components/layout/navbar";
 import { TopBar } from "@/components/layout/top-bar";
 
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <QuickBookingSection />
       <AboutSection />
+      <ServicesSection />
     </main>
   );
 }
