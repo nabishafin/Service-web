@@ -15,6 +15,7 @@ function AnimatedStat({
 
   useEffect(() => {
     if (!start) {
+      setDisplayValue(0);
       return;
     }
 
@@ -37,7 +38,7 @@ function AnimatedStat({
 
   return (
     <div className="text-center">
-      <p className="text-[3rem] font-extrabold leading-none tracking-[-0.05em] text-[#18344f] sm:text-[4.2rem]">
+      <p className="text-[2.5rem] font-medium leading-none tracking-[-0.02em] text-[#18344f] sm:text-[3.5rem]">
         {displayValue}
         {suffix}
       </p>
@@ -60,10 +61,7 @@ export function AboutSection() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry?.isIntersecting) {
-          setHasStartedCount(true);
-          observer.disconnect();
-        }
+        setHasStartedCount(entry.isIntersecting);
       },
       { threshold: 0.3 }
     );

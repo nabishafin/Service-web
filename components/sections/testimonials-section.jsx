@@ -14,8 +14,8 @@ function StarIcon() {
 
 function QuoteBadge() {
   return (
-    <span className="absolute -right-1 top-0 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-accent)] text-2xl font-black leading-none text-white shadow-[0_10px_24px_rgba(255,111,36,0.24)]">
-      &ldquo;
+    <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-[#ff6017] shadow-sm">
+      <span className="text-white text-xl sm:text-2xl font-black leading-none pt-1.5 sm:pt-2 font-serif">&ldquo;</span>
     </span>
   );
 }
@@ -60,11 +60,11 @@ export function TestimonialsSection() {
   }, [activeIndex, isDesktop]);
 
   return (
-    <section className="bg-[var(--color-navy)] px-4 py-18 text-white sm:px-6 sm:py-22 lg:px-8 lg:py-24">
+    <section className="bg-[var(--color-navy)] px-4 py-10 text-white sm:px-6 sm:py-22 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <p className="text-sm font-extrabold text-[var(--color-accent)] sm:text-base">Testimonial</p>
-          <h2 className="mx-auto mt-5 max-w-5xl text-[2.7rem] font-extrabold leading-[1.03] tracking-[-0.06em] text-white sm:text-[3.8rem] lg:text-[4.55rem]">
+          <h2 className="mx-auto mt-5 max-w-5xl text-[2.25rem] font-bold leading-tight tracking-tight text-white sm:text-[3rem] lg:text-[3.5rem]">
             What Our Customers Say
           </h2>
         </div>
@@ -81,7 +81,7 @@ export function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="mt-7 grow text-[1.05rem] leading-9 text-[#18344f] sm:text-[1.1rem]">
+              <p className="mt-7 grow text-base leading-relaxed font-light text-[#18344f] sm:text-[1.05rem]">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
@@ -99,10 +99,10 @@ export function TestimonialsSection() {
                   </div>
 
                   <div>
-                    <p className="text-[1.45rem] font-extrabold tracking-[-0.04em] text-[#18344f]">
+                    <p className="text-xl font-bold tracking-tight text-[#18344f]">
                       {testimonial.name}
                     </p>
-                    <p className="mt-1 text-lg text-[#7a858d]">{testimonial.role}</p>
+                    <p className="mt-1 text-base text-[#7a858d]">{testimonial.role}</p>
                   </div>
                 </div>
 
@@ -122,9 +122,8 @@ export function TestimonialsSection() {
               aria-label={`Show testimonial ${index + 1}`}
               title={testimonial.name}
               onClick={() => setActiveIndex(index)}
-              className={`h-3.5 w-3.5 rounded-full transition ${
-                index === activeIndex ? "bg-[var(--color-accent)]" : "bg-[rgba(255,167,111,0.45)] hover:bg-[rgba(255,167,111,0.75)]"
-              }`}
+              className={`h-3.5 w-3.5 rounded-full transition ${index === activeIndex ? "bg-[var(--color-accent)]" : "bg-[rgba(255,167,111,0.45)] hover:bg-[rgba(255,167,111,0.75)]"
+                }`}
             />
           ))}
         </div>

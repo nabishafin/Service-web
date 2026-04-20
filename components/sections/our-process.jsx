@@ -111,7 +111,7 @@ function CheckIcon({ className }) {
 
 export function OurProcess() {
   return (
-    <section className="relative overflow-hidden bg-white py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-white py-10 lg:py-28">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white" />
 
@@ -127,7 +127,7 @@ export function OurProcess() {
           <span className="text-sm font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
             Our Process
           </span>
-          <h2 className="mx-auto mt-4 max-w-xl text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-[42px]">
+          <h2 className="mx-auto mt-4 max-w-xl text-[2rem] font-semibold leading-tight tracking-tight text-gray-900 sm:text-[2.25rem] lg:text-[2.75rem]">
             Fixing Your Plumbing Issues in Just 5 Steps
           </h2>
 
@@ -164,34 +164,31 @@ export function OurProcess() {
               return (
                 <div
                   key={step.number}
-                  className={`relative flex items-center ${
-                    isLeft ? "lg:flex-row" : "lg:flex-row-reverse"
-                  } flex-col lg:flex-row`}
+                  className={`relative flex items-center ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"
+                    } flex-col lg:flex-row`}
                 >
                   {/* Card */}
                   <motion.div
-                    className={`w-full lg:w-[calc(50%-40px)] ${
-                      isLeft ? "lg:pr-0" : "lg:pl-0"
-                    } ${isLeft ? "lg:text-right" : "lg:text-left"} pl-12 lg:pl-0`}
+                    className={`w-full lg:w-[calc(50%-40px)] ${isLeft ? "lg:pr-0" : "lg:pl-0"
+                      } ${isLeft ? "lg:text-right" : "lg:text-left"} pl-12 lg:pl-0`}
                     variants={isLeft ? leftCardVariants : rightCardVariants}
                   >
                     <div
-                      className={`flex min-h-[200px] flex-col rounded-2xl bg-[#0f3048] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25)] sm:p-8 ${
-                        isLeft ? "lg:mr-auto lg:ml-0" : "lg:ml-auto lg:mr-0"
-                      } max-w-md ${isLeft ? "lg:ml-auto" : "lg:mr-auto"}`}
+                      className={`flex min-h-[200px] flex-col rounded-2xl bg-[#0f3048] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25)] sm:p-8 ${isLeft ? "lg:mr-auto lg:ml-0" : "lg:ml-auto lg:mr-0"
+                        } max-w-md ${isLeft ? "lg:ml-auto" : "lg:mr-auto"}`}
                     >
                       {/* Step Number */}
-                      <span className="text-4xl font-bold text-[var(--color-accent)] sm:text-5xl">
+                      <span className="text-3xl font-bold text-[var(--color-accent)] sm:text-4xl">
                         {step.number}
                       </span>
 
                       {/* Title */}
-                      <h3 className="mt-3 text-xl font-bold text-white sm:text-2xl">
+                      <h3 className="mt-3 text-lg font-semibold text-white sm:text-xl">
                         {step.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="mt-3 grow text-sm leading-relaxed text-[#94a3b8] sm:text-base">
+                      <p className="mt-3 grow text-sm font-light leading-relaxed text-[#94a3b8] sm:text-[0.95rem]">
                         {step.description}
                       </p>
                     </div>

@@ -106,7 +106,7 @@ export function HeroSection() {
 
       <div className="relative mx-auto flex min-h-[calc(100vh-42px)] max-w-7xl items-center px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24">
         <div className="max-w-2xl">
-          <p className="text-lg font-bold text-orange-400 sm:text-xl">Your Trusted Plumbing Experts</p>
+          <p className=" mt-16 text-md font-semibold text-[#ff6017] sm:text-xl">Your Trusted Plumbing Experts</p>
 
           <h1 className="mt-6 max-w-xl text-5xl font-extrabold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
             Fast Solutions for Plumbing Problems
@@ -120,7 +120,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#quote"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-8 py-4 text-lg font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)]"
+              className="inline-flex items-center justify-center rounded-full bg-[#ff6017] px-8 py-4 text-lg font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[#ff6017]"
             >
               Get a Free Quote
             </a>

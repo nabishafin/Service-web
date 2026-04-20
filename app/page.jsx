@@ -6,6 +6,8 @@ import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { Navbar } from "@/components/layout/navbar";
 import { TopBar } from "@/components/layout/top-bar";
 import { OurProcess } from "@/components/sections/our-process";
+import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section";
+import { ServiceGallerySection } from "@/components/sections/service-gallery-section";
 
 export default function Home() {
   return (
@@ -22,7 +24,9 @@ export default function Home() {
       <ServicesSection />
       {/* Our process */}
       <OurProcess />  
+      <WhyChooseUsSection />
       <TestimonialsSection />
+      <ServiceGallerySection />
     </main>
   );
 }

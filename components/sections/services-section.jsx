@@ -36,8 +36,8 @@ export function ServicesSection() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-4xl">
-            <p className="text-sm font-extrabold text-[var(--color-accent)] sm:text-base">Our Service</p>
-            <h2 className="mt-5 max-w-[48rem] text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.06em] text-[#18344f] sm:text-[3.8rem] lg:text-[4.35rem]">
+            <p className="text-sm font-semibold text-[var(--color-accent)] sm:text-base">Our Service</p>
+            <h2 className="mt-5 max-w-[48rem] text-[2.25rem] font-semibold leading-[1.05] tracking-[-0.04em] text-[#18344f] sm:text-[3rem] lg:text-[3.5rem]">
               Reliable, Fast, and Expert Plumbing Solutions
             </h2>
           </div>
@@ -69,7 +69,7 @@ export function ServicesSection() {
                       isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
                     }`}
                   />
-                  <span className="text-[1.7rem] font-bold leading-none tracking-[-0.03em] sm:text-[2.05rem]">
+                  <span className="text-[1.4rem] font-semibold leading-none tracking-[-0.02em] sm:text-[1.75rem]">
                     {service.title}
                   </span>
                 </button>
