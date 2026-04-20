@@ -179,8 +179,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="relative mx-auto h-full w-full max-w-7xl">
+      <div className="pointer-events-none absolute inset-0 mx-auto w-full">
+        <div className="relative mx-auto h-full w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="pointer-events-auto">
             <RecognitionPanel />
           </div>

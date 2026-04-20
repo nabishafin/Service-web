@@ -32,8 +32,8 @@ export function ServicesSection() {
   );
 
   return (
-    <section className="bg-[#f5f7fd] px-4 py-18 sm:px-6 sm:py-22 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-[#f5f7fd] py-18 sm:py-22 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-4xl">
             <p className="text-sm font-semibold text-[var(--color-accent)] sm:text-base">Our Service</p>

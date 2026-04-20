@@ -11,7 +11,7 @@ export function ContactSection() {
           src="/images/EM4AaWEyJ9wPPFWwzQyNNn56cU.png"
           alt="Contact background"
           fill
-          className="object-cover opacity-25"
+          className="object-cover opacity-95"
         />
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-start px-4 pt-20 text-center sm:px-6 sm:pt-24 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.1em] text-[#ff6017]">
@@ -26,9 +26,9 @@ export function ContactSection() {
       {/* Bottom Light Background Segment */}
       <div className="relative bg-[#f4f7f9] pb-20 pt-6 sm:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
-          <div className="relative -mt-[8rem] flex flex-col-reverse gap-12 sm:-mt-[11rem] lg:grid lg:grid-cols-[1fr_450px] lg:items-start lg:gap-16 xl:grid-cols-[1.2fr_500px]">
-            
+
+          <div className="relative -mt-[8rem] flex flex-col-reverse gap-12 sm:-mt-[11rem] lg:grid lg:grid-cols-[1fr_500px] lg:items-start lg:gap-16 xl:grid-cols-[1.2fr_600px]">
+
             {/* Left Content Column */}
             <div className="lg:pt-[16rem]">
               <h3 className="text-2xl font-bold leading-tight tracking-tight text-[#18344f] sm:text-[2rem]">
@@ -43,11 +43,11 @@ export function ContactSection() {
             </div>
 
             {/* Right Form Column */}
-            <div className="relative z-20 mx-auto w-full max-w-[500px] rounded-2xl bg-white p-7 shadow-[0_20px_60px_rgba(15,48,72,0.08)] sm:p-10 lg:mx-0">
+            <div className="relative z-20 mx-auto w-full max-w-[600px] rounded-2xl bg-white p-7 shadow-[0_20px_60px_rgba(15,48,72,0.08)] sm:p-10 lg:mx-0">
               <h3 className="text-center text-2xl font-bold tracking-tight text-[#18344f] sm:text-[1.7rem]">
                 Get in Touch with Us
               </h3>
-              
+
               <form className="mt-8 flex flex-col gap-4">
                 <input
                   type="text"

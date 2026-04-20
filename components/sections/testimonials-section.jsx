@@ -60,8 +60,8 @@ export function TestimonialsSection() {
   }, [activeIndex, isDesktop]);
 
   return (
-    <section className="bg-[var(--color-navy)] px-4 py-1 text-white sm:px-6 sm:py-22 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-[var(--color-navy)] py-10 text-white sm:py-22 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm font-extrabold text-[var(--color-accent)] sm:text-base">Testimonial</p>
           <h2 className="mx-auto mt-5 max-w-5xl text-[2.7rem] font-extrabold leading-[1.03] tracking-[-0.06em] text-white sm:text-[3.8rem] lg:text-[4.55rem]">
