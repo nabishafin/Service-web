@@ -40,7 +40,7 @@ export function ServicesSection() {
               Expert Services
             </p>
             <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
-              Fast & Reliable Solutions for Every Plumbing Need
+              Fast & Reliable Solutions for Every Plumbing Need h
             </h2>
           </div>
 
@@ -61,15 +61,13 @@ export function ServicesSection() {
                 <li key={service.id}>
                   <button
                     type="button"
-                    className={`group flex w-full items-center gap-4 border-b border-transparent py-7 text-left transition first:pt-4 last:border-b-0 ${
-                      isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
-                    }`}
+                    className={`group flex w-full items-center gap-4 border-b border-transparent py-7 text-left transition first:pt-4 last:border-b-0 ${isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
+                      }`}
                     onClick={() => setActiveServiceId(service.id)}
                   >
                     <ArrowRightIcon
-                      className={`h-6 w-6 shrink-0 transition ${
-                        isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
-                      }`}
+                      className={`h-6 w-6 shrink-0 transition ${isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
+                        }`}
                     />
                     <span className="text-[1.2rem] font-semibold leading-none tracking-[-0.02em] sm:text-[1.75rem]">
                       {service.title}
