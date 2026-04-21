@@ -19,9 +19,9 @@ export function Footer() {
     <footer className="bg-[var(--color-navy)] text-white">
       {/* Emergency CTA Bar */}
       <div className="border-b border-white/5 py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-            <h2 className="text-center text-[1.75rem] font-bold leading-tight tracking-tight sm:text-[2.25rem] md:text-left md:max-w-xl">
+            <h2 className="text-center text-[1.5rem] font-bold leading-tight tracking-tight sm:text-[1.75rem] md:text-left md:max-w-xl md:text-[2.25rem]">
               Get 24/7 Emergency Plumbing Help — Call Today!
             </h2>
             <a
@@ -37,7 +37,7 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
             {/* Brand column */}
             <div className="flex flex-col gap-6">
@@ -111,7 +111,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/5 py-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
           <p className="text-center text-sm font-medium text-gray-500 md:text-left">
             &copy; {currentYear} Plumbflow. All Rights Reserved.
           </p>

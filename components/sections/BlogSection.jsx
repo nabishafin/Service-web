@@ -6,14 +6,14 @@ import { blogPosts } from "@/lib/blog-data";
 export function BlogSection() {
   return (
     <section id="blog" className="bg-white py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         {/* Header */}
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
               Updates & Insights
             </p>
-            <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+            <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
               Expert Advice for Maintaining Your Home
             </h2>
           </div>
@@ -27,7 +27,7 @@ export function BlogSection() {
         </div>
 
         {/* Blog Grid */}
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
           {blogPosts.map((post) => (
             <article
               key={post.id}

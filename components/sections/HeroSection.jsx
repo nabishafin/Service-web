@@ -92,7 +92,7 @@ function RecognitionPanel() {
 
 export function HeroSection() {
   return (
-    <section id="home-hero" className="relative min-h-[600px] sm:min-h-[800px] lg:min-h-[1050px] overflow-hidden bg-slate-950 text-white">
+    <section id="home-hero" className="relative min-h-[580px] overflow-hidden bg-slate-950 text-white sm:min-h-[740px] lg:min-h-[1050px]">
       <Image
         src="/images/6hZX53cd2BQPBn5f2U9LrdEHxw.png"
         alt="Plumber repairing a kitchen faucet"
@@ -101,86 +101,99 @@ export function HeroSection() {
         className="object-cover object-[right_top]"
       />
 
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,14,24,0.85)_0%,rgba(7,14,24,0.65)_32%,rgba(7,14,24,0.15)_63%,rgba(7,14,24,0.02)_100%)]" />
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,14,24,0.92)_0%,rgba(7,14,24,0.75)_40%,rgba(7,14,24,0.25)_70%,rgba(7,14,24,0.05)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent_30%)]" />
 
-      <div className="relative mx-auto flex min-h-[600px] sm:min-h-[800px] lg:min-h-[1050px] w-full items-center pb-16 pt-14 lg:pb-24">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <p className=" mt-16 text-md font-semibold text-[var(--color-accent)] sm:text-xl">Your Trusted Plumbing Experts</p>
+      {/* Content */}
+      <div className="relative mx-auto flex min-h-[580px] w-full items-center pb-12 pt-10 sm:min-h-[740px] sm:pb-16 sm:pt-12 lg:min-h-[1050px] lg:pb-24 lg:pt-14">
+        <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
+          <div className="max-w-2xl">
+            {/* Eyebrow */}
+            <p className="mt-14 text-sm font-semibold text-[var(--color-accent)] sm:mt-16 sm:text-lg lg:text-xl">
+              Your Trusted Plumbing Experts
+            </p>
 
-          <h1 className="mt-6 max-w-xl text-5xl font-extrabold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-            Fast Solutions for Plumbing Problems
-          </h1>
+            {/* Headline — scales from 2.4rem on mobile to 4.5rem on desktop */}
+            <h1 className="mt-4 max-w-xl text-[2.4rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:mt-6 sm:text-5xl lg:text-7xl">
+              Fast Solutions for Plumbing Problems
+            </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/78 sm:text-xl">
-            From minor leaks to major plumbing emergencies, our expert team is ready to deliver fast,
-            reliable affordable solutions ensuring.
-          </p>
+            {/* Sub-copy */}
+            <p className="mt-5 max-w-lg text-base leading-7 text-white/80 sm:mt-7 sm:text-lg sm:leading-8 lg:max-w-2xl lg:text-xl">
+              From minor leaks to major plumbing emergencies, our expert team is ready to deliver fast,
+              reliable affordable solutions ensuring.
+            </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#quote"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-8 py-4 text-lg font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)]"
-            >
-              Get a Free Quote
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/65 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition hover:bg-white/10"
-            >
-              Contact Us Today
-            </a>
-          </div>
-
-          <div className="relative mt-16 flex w-fit items-center gap-5 rounded-[999px] border border-white/40 bg-[rgba(95,95,103,0.32)] px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.22)] backdrop-blur-[10px]">
-            <div className="flex items-center">
-              {avatarItems.map((item, index) => (
-                <div
-                  key={item.type === "image" ? item.src : item.label}
-                  className="-ml-2 first:ml-0"
-                  style={{ zIndex: avatarItems.length - index }}
-                >
-                  {item.type === "image" ? (
-                    <div className="overflow-hidden rounded-full border-[3px] border-[#3d3d45] shadow-sm">
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        width={48}
-                        height={48}
-                        className="h-12 w-12 rounded-full object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <span
-                      className={`inline-flex h-12 w-12 items-center justify-center rounded-full border-[3px] border-[#3d3d45] bg-gradient-to-br ${item.color} text-sm font-bold text-white shadow-sm`}
-                    >
-                      {item.label}
-                    </span>
-                  )}
-                </div>
-              ))}
+            {/* CTA Buttons — stacked on mobile, row on sm+ */}
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-7 py-3.5 text-base font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)] sm:px-8 sm:py-4 sm:text-lg"
+              >
+                Get a Free Quote
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-white/65 bg-white/5 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-lg"
+              >
+                Contact Us Today
+              </a>
             </div>
 
-            <div className="min-w-0 pr-10">
-              <p className="text-[22px] font-extrabold leading-none tracking-[-0.02em] text-white sm:text-[25px]">
-                130K +
-              </p>
-              <p className="mt-2 text-[13px] font-semibold leading-none text-white/90 sm:text-[14px]">
-                Customer Review
-              </p>
-            </div>
+            {/* Social proof pill */}
+            <div className="relative mt-10 mx-auto flex w-fit max-w-full items-center gap-3 rounded-[999px] border border-white/40 bg-[rgba(95,95,103,0.32)] px-3 py-2.5 shadow-[0_18px_40px_rgba(0,0,0,0.22)] backdrop-blur-[10px] sm:mx-0 sm:mt-14 sm:gap-5 sm:px-4 sm:py-3">
+              {/* Avatar stack */}
+              <div className="flex shrink-0 items-center">
+                {avatarItems.map((item, index) => (
+                  <div
+                    key={item.type === "image" ? item.src : item.label}
+                    className="-ml-2 first:ml-0"
+                    style={{ zIndex: avatarItems.length - index }}
+                  >
+                    {item.type === "image" ? (
+                      <div className="overflow-hidden rounded-full border-[3px] border-[#3d3d45] shadow-sm">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          width={40}
+                          height={40}
+                          className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
+                        />
+                      </div>
+                    ) : (
+                      <span
+                        className={`inline-flex h-10 w-10 items-center justify-center rounded-full border-[3px] border-[#3d3d45] bg-gradient-to-br ${item.color} text-xs font-bold text-white shadow-sm sm:h-12 sm:w-12 sm:text-sm`}
+                      >
+                        {item.label}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
 
-            <span className="absolute -right-1 -top-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-accent)] text-white shadow-[0_12px_24px_rgba(255,111,36,0.45)]">
-              <CheckIcon className="h-4 w-4" />
-            </span>
+              {/* Count */}
+              <div className="min-w-0 pr-8 sm:pr-10">
+                <p className="text-[1.2rem] font-extrabold leading-none tracking-[-0.02em] text-white sm:text-[1.4rem]">
+                  130K +
+                </p>
+                <p className="mt-1.5 text-[0.7rem] font-semibold leading-none text-white/90 sm:text-[0.8rem]">
+                  Customer Reviews
+                </p>
+              </div>
+
+              {/* Check badge */}
+              <span className="absolute -right-1 -top-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--color-accent)] text-white shadow-[0_12px_24px_rgba(255,111,36,0.45)] sm:h-10 sm:w-10">
+                <CheckIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              </span>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
+      {/* Recognition panel — xl only, positioned absolutely */}
       <div className="pointer-events-none absolute inset-0 mx-auto w-full">
-        <div className="relative mx-auto h-full w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto h-full w-full max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="pointer-events-auto">
             <RecognitionPanel />
           </div>

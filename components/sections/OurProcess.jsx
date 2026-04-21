@@ -46,7 +46,7 @@ const containerVariants = {
 };
 
 const leftCardVariants = {
-  hidden: { opacity: 0, x: -80 },
+  hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
     x: 0,
@@ -58,7 +58,7 @@ const leftCardVariants = {
 };
 
 const rightCardVariants = {
-  hidden: { opacity: 0, x: 80 },
+  hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
     x: 0,
@@ -115,7 +115,7 @@ export function OurProcess() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         {/* Header */}
         <motion.div
           className="text-center"
@@ -127,7 +127,7 @@ export function OurProcess() {
           <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
             How We Work
           </span>
-          <h2 className="mx-auto mt-4 max-w-2xl text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+          <h2 className="mx-auto mt-4 max-w-2xl text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
             Streamlined Process for Quality Results
           </h2>
 

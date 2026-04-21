@@ -61,12 +61,12 @@ export function TestimonialsSection() {
 
   return (
     <section className="bg-[var(--color-navy)] py-20 text-white lg:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center">
           <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
             Customer Voice
           </p>
-          <h2 className="mx-auto mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-white lg:text-[3.25rem]">
+          <h2 className="mx-auto mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[2.5rem] lg:text-[3.25rem]">
             Trusted by Homeowners Across the Region
           </h2>
         </div>

@@ -77,8 +77,8 @@ export function AboutSection() {
   );
 
   return (
-    <section id="about" ref={sectionRef} className="bg-white py-20 lg:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="about" ref={sectionRef} className="bg-white py-16 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
           <div className="overflow-hidden rounded-2xl bg-[#eef2f7]">
             <Image
@@ -91,16 +91,16 @@ export function AboutSection() {
             />
           </div>
 
-          <div className="pt-2">
+          <div className="pt-2 min-w-0">
             <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
               Expertise & Experience
             </p>
 
-            <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+            <h2 className="mt-4 w-full break-words text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
               Years of Dedicated Quality Service
             </h2>
 
-            <div className="mt-10 flex flex-col border-b border-[#dbe2ea] sm:flex-row">
+            <div className="mt-8 flex flex-row overflow-x-auto border-b border-[#dbe2ea] -mx-6 px-6 sm:mx-0 sm:flex-nowrap sm:px-0">
               {aboutTabs.map((tab) => {
                 const isActive = tab.id === activeTab;
 
@@ -108,7 +108,7 @@ export function AboutSection() {
                   <button
                     key={tab.id}
                     type="button"
-                    className={`px-8 py-4 text-left text-xl font-bold transition sm:flex-1 sm:text-center ${isActive
+                    className={`shrink-0 whitespace-nowrap px-6 py-4 text-left text-lg font-bold transition sm:whitespace-normal sm:px-8 sm:text-xl sm:flex-1 sm:text-center ${isActive
                       ? "text-[var(--color-accent)]"
                       : "text-[#18344f] hover:text-[var(--color-accent)]"
                       }`}
@@ -120,7 +120,7 @@ export function AboutSection() {
               })}
             </div>
 
-            <p className="mt-7 max-w-[52rem] text-lg leading-9 text-[#66737d] sm:text-[1.05rem]">
+            <p className="mt-7 max-w-[52rem] text-lg leading-relaxed text-[#66737d] sm:text-[1.05rem]">
               {activeContent.body}
             </p>
 

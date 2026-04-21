@@ -35,12 +35,12 @@ export function WhyChooseUsSection() {
 
   return (
     <section className="bg-white py-20 lg:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
             The PlumbFlow Advantage
           </p>
-          <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] lg:text-[3.25rem]">
+          <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
             Why Homeowners Prefer Our Plumbing Expertise
           </h2>
         </div>
