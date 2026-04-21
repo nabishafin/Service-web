@@ -156,13 +156,13 @@ export function OurProcess() {
           {/* Mobile Vertical Line */}
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-accent)] via-[#2a3a4f] to-[#2a3a4f] lg:hidden" />
 
-          <div className="relative space-y-8 lg:space-y-12">
+          <ol className="relative space-y-8 lg:space-y-12">
             {steps.map((step, index) => {
               const isLeft = index % 2 === 1;
               const isEven = index % 2 === 0;
 
               return (
-                <div
+                <li
                   key={step.number}
                   className={`relative flex items-center ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"
                     } flex-col lg:flex-row`}
@@ -219,10 +219,10 @@ export function OurProcess() {
 
                   {/* Empty space for other side on desktop */}
                   <div className="hidden w-[calc(50%-40px)] lg:block" />
-                </div>
+                </li>
               );
             })}
-          </div>
+          </ol>
         </motion.div>
       </div>
     </section>

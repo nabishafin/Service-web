@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckIcon } from "@/components/ui/icons";
+import { CheckIcon } from "@/components/ui/Icons";
 
 const avatarItems = [
   { type: "image", src: "/images/JcrnwGYRV1uMCIgxw5KS2EzOx0.png", alt: "Happy customer" },

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navigationItems } from "@/lib/site-data";
-import { ChevronDownIcon, CloseIcon, MenuIcon, PhoneIcon } from "@/components/ui/icons";
-import { LogoMark } from "@/components/ui/logo-mark";
+import { ChevronDownIcon, CloseIcon, MenuIcon, PhoneIcon } from "@/components/ui/Icons";
+import { LogoMark } from "@/components/ui/LogoMark";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +39,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
+    <div
       className={`fixed inset-x-0 z-40 transition-all duration-300 ${
         isAtTop ? "top-0" : "top-0 lg:top-[42px]"
       } ${
@@ -114,6 +114,6 @@ export function Navbar() {
           </a>
         </div>
       ) : null}
-    </header>
+    </div>
   );
 }

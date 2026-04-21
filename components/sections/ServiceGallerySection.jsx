@@ -5,31 +5,31 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    title: "Pipe Repair Commercial",
+    title: "Commercial Pipe Replacement",
     src: "/images/1zYVz9QJc5BOeqL5dB0N8o8SDoc.png",
     className: "md:col-span-4 md:row-span-2",
   },
   {
     id: 2,
-    title: "Pipe Repair Commercial",
+    title: "Residential Drain Cleaning",
     src: "/images/Kj6Jy6kSwel2ONNzgeIEtYtHxk.png",
     className: "md:col-span-5 md:row-span-1",
   },
   {
     id: 3,
-    title: "Pipe Repair Commercial",
+    title: "Water Heater Installation",
     src: "/images/0uxFc4M6TuuW1docugfKFJfHK0.png",
     className: "md:col-span-3 md:row-span-1",
   },
   {
     id: 4,
-    title: "Pipe Repair Commercial",
+    title: "Leak Detection & Repair",
     src: "/images/qc4QPjkmjedX6S8OZe0g3xmBc.png",
     className: "md:col-span-3 md:row-span-1",
   },
   {
     id: 5,
-    title: "Pipe Repair Commercial",
+    title: "Emergency Flood Response",
     src: "/images/ELqUVtmLoVs21G0mJIEepivQq8M.png",
     className: "md:col-span-5 md:row-span-1",
   },

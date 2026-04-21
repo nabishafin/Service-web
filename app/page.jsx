@@ -1,22 +1,17 @@
-import { HeroSection } from "@/components/sections/hero-section";
-import { AboutSection } from "@/components/sections/about-section";
-import { QuickBookingSection } from "@/components/sections/quick-booking-section";
-import { ServicesSection } from "@/components/sections/services-section";
-import { TestimonialsSection } from "@/components/sections/testimonials-section";
-import { Navbar } from "@/components/layout/navbar";
-import { TopBar } from "@/components/layout/top-bar";
-import { OurProcess } from "@/components/sections/our-process";
-import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section";
-import { ServiceGallerySection } from "@/components/sections/service-gallery-section";
-import { BlogSection } from "@/components/sections/blog-section";
-import { ContactSection } from "@/components/sections/contact-section";
-import { Footer } from "@/components/layout/footer";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { QuickBookingSection } from "@/components/sections/QuickBookingSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { OurProcess } from "@/components/sections/OurProcess";
+import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
+import { ServiceGallerySection } from "@/components/sections/ServiceGallerySection";
+import { BlogSection } from "@/components/sections/BlogSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
     <main>
-      <TopBar />
-      <Navbar />
       <div className="relative">
         <HeroSection />
       </div>
@@ -32,7 +27,6 @@ export default function Home() {
       <ServiceGallerySection />
       <ContactSection />
       <BlogSection />
-      <Footer />
     </main>
   );
 }

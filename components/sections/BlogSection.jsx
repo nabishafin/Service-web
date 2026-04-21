@@ -45,9 +45,9 @@ export function BlogSection() {
 
               {/* Content */}
               <div className="flex flex-col p-6 pb-8">
-                <p className="text-sm font-medium text-[#66737d]">
+                <time className="text-sm font-medium text-[#66737d]">
                   {post.date}
-                </p>
+                </time>
                 <h3 className="mt-4 text-xl font-bold leading-snug text-[#18344f] transition group-hover:text-[var(--color-accent)] sm:text-2xl">
                   {post.title}
                 </h3>

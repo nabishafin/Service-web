@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { LogoMark } from "@/components/ui/logo-mark";
+import { LogoMark } from "@/components/ui/LogoMark";
 import { 
   FacebookIcon, 
   InstagramIcon, 
@@ -10,7 +10,7 @@ import {
   PhoneIcon, 
   MailIcon, 
   MapPinIcon 
-} from "@/components/ui/icons";
+} from "@/components/ui/Icons";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -88,23 +88,23 @@ export function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div>
-              <h3 className="mb-8 text-lg font-bold text-white">Contact Us</h3>
+            <address className="not-italic">
+              <h3 className="mb-8 text-lg font-bold text-white transition hover:text-white">Contact Us</h3>
               <ul className="space-y-6 text-base font-medium text-gray-400">
                 <li className="flex gap-4">
-                  <MapPinIcon className="h-6 w-6 shrink-0 text-[var(--color-accent)]" />
+                  <MapPinIcon className="h-6 w-6 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
                   <span>123 Main Street, Your City, State, ZIP</span>
                 </li>
                 <li className="flex gap-4">
-                  <MailIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" />
+                  <MailIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
                   <a href="mailto:contact@plumbflow.com" className="transition hover:text-white">contact@plumbflow.com</a>
                 </li>
                 <li className="flex gap-4">
-                  <PhoneIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" />
-                  <a href="tel:+11234567890" className="transition hover:text-white">(123) 456-7890</a>
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
+                  <a href="tel:+11245678900" className="transition hover:text-white">(124) 567 8900</a>
                 </li>
               </ul>
-            </div>
+            </address>
           </div>
         </div>
       </div>

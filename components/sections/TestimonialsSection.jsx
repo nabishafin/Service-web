@@ -36,7 +36,7 @@ function BrandMark({ brand }) {
 }
 
 export function TestimonialsSection() {
-  const [activeIndex, setActiveIndex] = useState(4);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {

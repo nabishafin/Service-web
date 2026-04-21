@@ -24,7 +24,7 @@ function ArrowRightIcon({ className = "" }) {
 
 export function ServicesSection() {
   const [activeServiceId, setActiveServiceId] =
-    useState("leak-detection");
+    useState("emergency-plumbing");
 
   const activeService = useMemo(
     () => serviceItems.find((service) => service.id === activeServiceId) ?? serviceItems[0],
@@ -32,7 +32,7 @@ export function ServicesSection() {
   );
 
   return (
-    <section className="bg-[#f5f7fd] py-18 sm:py-22 lg:py-24">
+    <section id="services" className="bg-[#f5f7fd] py-18 sm:py-22 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
@@ -53,31 +53,32 @@ export function ServicesSection() {
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.4fr)] lg:items-start">
-          <div className="flex flex-col">
+          <ul className="flex flex-col">
             {serviceItems.map((service) => {
               const isActive = service.id === activeServiceId;
 
               return (
-                <button
-                  key={service.id}
-                  type="button"
-                  className={`group flex items-center gap-4 border-b border-transparent py-7 text-left transition first:pt-4 last:border-b-0 ${
-                    isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
-                  }`}
-                  onClick={() => setActiveServiceId(service.id)}
-                >
-                  <ArrowRightIcon
-                    className={`h-6 w-6 shrink-0 transition ${
+                <li key={service.id}>
+                  <button
+                    type="button"
+                    className={`group flex w-full items-center gap-4 border-b border-transparent py-7 text-left transition first:pt-4 last:border-b-0 ${
                       isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
                     }`}
-                  />
-                  <span className="text-[1.4rem] font-semibold leading-none tracking-[-0.02em] sm:text-[1.75rem]">
-                    {service.title}
-                  </span>
-                </button>
+                    onClick={() => setActiveServiceId(service.id)}
+                  >
+                    <ArrowRightIcon
+                      className={`h-6 w-6 shrink-0 transition ${
+                        isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
+                      }`}
+                    />
+                    <span className="text-[1.4rem] font-semibold leading-none tracking-[-0.02em] sm:text-[1.75rem]">
+                      {service.title}
+                    </span>
+                  </button>
+                </li>
               );
             })}
-          </div>
+          </ul>
 
           <div className="overflow-hidden rounded-2xl bg-[#dfe5ee]">
             <div className="relative min-h-[22rem] sm:min-h-[28rem] lg:min-h-[30.25rem]">

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function ContactSection() {
   return (
-    <section id="contact-us" className="relative flex flex-col">
+    <section id="contact" className="relative flex flex-col">
       {/* Top Dark Background Segment */}
       <div className="relative h-[32rem] w-full bg-[#0a1622] sm:h-[38rem]">
         <Image
@@ -35,7 +35,7 @@ export function ContactSection() {
                 24/7 Emergency Plumbing Service
               </h3>
               <p className="mt-6 text-base font-semibold leading-relaxed text-[#18344f] lg:pr-10">
-                Don't let plumbing issues disrupt your home! FixFlow offers 24/7 emergency plumbing services, ensuring fast, professional, and reliable repairs. Call now and get a licensed plumber at your doorstep!
+                Don't let plumbing issues disrupt your home! PlumbFlow offers 24/7 emergency plumbing services, ensuring fast, professional, and reliable repairs. Call now and get a licensed plumber at your doorstep!
               </p>
               <p className="mt-5 text-[0.95rem] font-light leading-relaxed text-[#66737d] lg:pr-10">
                 We understand the stress and potential damage a plumbing emergency can cause, which is why we prioritize quick response times, quality repairs, and customer satisfaction. Whether it's a small leak or a major flooding issue, our licensed professionals arrive fully equipped.

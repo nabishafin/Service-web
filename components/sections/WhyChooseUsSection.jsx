@@ -15,7 +15,7 @@ const reasons = [
   {
     id: 2,
     title: "Clear & Honest Pricing",
-    description: "We believe in honesty and transparency with our customers. When you choose FixFlow.",
+    description: "We believe in honesty and transparency with our customers. When you choose PlumbFlow.",
     icon: (
       <Image src="/images/JfBzkZnCKP2TNf96vcQLi6bEY.svg" alt="Clear & Honest Pricing" width={52} height={52} className="object-contain" />
     ),
@@ -81,10 +81,9 @@ export function WhyChooseUsSection() {
             )}
           </div>
 
-          {/* List Block */}
-          <div className="flex flex-col gap-10 lg:pl-10">
+          <ul className="flex flex-col gap-10 lg:pl-10">
             {reasons.map((reason) => (
-              <div key={reason.id} className="flex items-start gap-7">
+              <li key={reason.id} className="flex items-start gap-7">
                 <div className="flex h-[5.5rem] w-[5.5rem] shrink-0 items-center justify-center rounded-full bg-[#f4f7f9]">
                   {reason.icon}
                 </div>
@@ -96,9 +95,9 @@ export function WhyChooseUsSection() {
                     {reason.description}
                   </p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

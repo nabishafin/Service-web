@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { aboutStats, aboutTabs } from "@/lib/about-data";
-import { CheckIcon } from "@/components/ui/icons";
+import { CheckIcon } from "@/components/ui/Icons";
 
 function AnimatedStat({
   value,
@@ -77,7 +77,7 @@ export function AboutSection() {
   );
 
   return (
-    <section ref={sectionRef} className="bg-white py-20 lg:py-32">
+    <section id="about" ref={sectionRef} className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
           <div className="overflow-hidden rounded-2xl bg-[#eef2f7]">
@@ -124,30 +124,31 @@ export function AboutSection() {
               {activeContent.body}
             </p>
 
-            <div className="mt-8 grid gap-x-10 gap-y-5 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-x-10 gap-y-5 sm:grid-cols-2">
               {activeContent.points.map((point) => (
-                <div key={point} className="flex items-start gap-3">
+                <li key={point} className="flex items-start gap-3">
                   <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[var(--color-accent)]">
                     <CheckIcon className="h-5 w-5" />
                   </span>
                   <p className="text-lg leading-8 text-[#66737d] sm:text-[1.05rem]">{point}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-18 grid gap-10 border-t border-transparent pt-4 sm:grid-cols-2 lg:mt-22 lg:grid-cols-4">
+        <ul className="mt-18 grid gap-10 border-t border-transparent pt-4 sm:grid-cols-2 lg:mt-22 lg:grid-cols-4">
           {aboutStats.map((stat) => (
-            <AnimatedStat
-              key={stat.label}
-              value={stat.value}
-              suffix={stat.suffix}
-              label={stat.label}
-              start={hasStartedCount}
-            />
+            <li key={stat.label}>
+              <AnimatedStat
+                value={stat.value}
+                suffix={stat.suffix}
+                label={stat.label}
+                start={hasStartedCount}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

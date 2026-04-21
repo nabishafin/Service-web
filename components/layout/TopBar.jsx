@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { contactItems } from "@/lib/site-data";
-import { ClockIcon, MailIcon, PhoneIcon } from "@/components/ui/icons";
+import { ClockIcon, MailIcon, PhoneIcon } from "@/components/ui/Icons";
 
 const iconMap = {
   phone: PhoneIcon,
