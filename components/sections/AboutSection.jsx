@@ -15,6 +15,7 @@ function AnimatedStat({
 
   useEffect(() => {
     if (!start) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDisplayValue(0);
       return;
     }

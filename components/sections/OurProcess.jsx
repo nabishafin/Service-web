@@ -159,7 +159,6 @@ export function OurProcess() {
           <ol className="relative space-y-8 lg:space-y-12">
             {steps.map((step, index) => {
               const isLeft = index % 2 === 1;
-              const isEven = index % 2 === 0;
 
               return (
                 <li
