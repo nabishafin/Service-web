@@ -69,7 +69,7 @@ export function Footer() {
               <h3 className="mb-8 text-lg font-bold text-white">Quick Links</h3>
               <ul className="space-y-4 text-base font-medium text-gray-400">
                 <li><Link href="#about" className="transition hover:text-white">About Us</Link></li>
-                <li><Link href="#services" className="transition hover:text-white">Services</Link></li>
+                <li><Link href="/services" className="transition hover:text-white">Services</Link></li>
                 <li><Link href="#blog" className="transition hover:text-white">Blog</Link></li>
                 <li><Link href="#contact" className="transition hover:text-white">Contact Us</Link></li>
                 <li><Link href="/404" className="transition hover:text-white">404</Link></li>

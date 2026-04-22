@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { serviceItems } from "@/lib/services-data";
 
@@ -40,16 +41,16 @@ export function ServicesSection() {
               Expert Services
             </p>
             <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
-              Fast & Reliable Solutions for Every Plumbing Need h
+              Fast & Reliable Solutions for Every Plumbing Need
             </h2>
           </div>
 
-          <a
-            href="#services"
+          <Link
+            href="/services"
             className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-8 text-lg font-bold text-white shadow-[0_16px_34px_rgba(255,111,36,0.28)] transition hover:bg-[var(--color-accent-strong)]"
           >
             View All Service
-          </a>
+          </Link>
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.4fr)] lg:items-start">
@@ -95,12 +96,12 @@ export function ServicesSection() {
                   {activeService.description}
                 </p>
 
-                <a
-                  href="#contact"
+                <Link
+                  href={`/services/${activeService.id}`}
                   className="mt-5 inline-flex h-13 items-center justify-center rounded-full bg-[var(--color-accent)] px-7 text-lg font-bold text-white shadow-[0_14px_28px_rgba(255,111,36,0.28)] transition hover:bg-[var(--color-accent-strong)]"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -109,4 +110,3 @@ export function ServicesSection() {
     </section>
   );
 }
-
