@@ -84,11 +84,11 @@ export function ContactPageContent() {
         </div>
 
         {/* Form and Map Grid */}
-        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-8">
+        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-10">
           {/* Form */}
-          <div className="rounded-[2.5rem] bg-white p-8 shadow-[0_20px_60px_rgba(15,48,72,0.06)] sm:p-12">
-            <h2 className="text-3xl font-bold text-[#0f3048]">Send us a message</h2>
-            <p className="mt-3 text-[#526677]">We typically reply within a few hours.</p>
+          <div className="rounded-2xl bg-white p-8 shadow-[0_15px_50px_rgba(15,48,72,0.05)] border border-gray-100 sm:p-12">
+            <h2 className="text-2xl font-bold text-[#0f3048]">Send us a message</h2>
+            <p className="mt-3 text-base text-[#526677]">Our professional team typically responds within a few business hours.</p>
 
             <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
               <div className="grid gap-6 sm:grid-cols-2">
@@ -101,7 +101,7 @@ export function ContactPageContent() {
                     onChange={handleChange}
                     required
                     placeholder="John"
-                    className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                   />
                 </div>
                 <div>
@@ -113,7 +113,7 @@ export function ContactPageContent() {
                     onChange={handleChange}
                     required
                     placeholder="Doe"
-                    className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                   />
                 </div>
               </div>
@@ -127,7 +127,7 @@ export function ContactPageContent() {
                   onChange={handleChange}
                   required
                   placeholder="john@example.com"
-                  className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                 />
               </div>
 
@@ -137,7 +137,7 @@ export function ContactPageContent() {
                   id="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-[#526677] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm text-[#526677] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                 >
                   <option value="">Select a service...</option>
                   {serviceItems.map((service) => (
@@ -158,7 +158,7 @@ export function ContactPageContent() {
                   required
                   rows={5}
                   placeholder="How can we help you?"
-                  className="w-full resize-none rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-5 py-4 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                 ></textarea>
               </div>
 
@@ -172,7 +172,7 @@ export function ContactPageContent() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-2 inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-8 text-lg font-bold text-white shadow-lg transition hover:bg-[var(--color-accent-strong)] hover:shadow-[var(--color-accent)]/40 active:scale-95 disabled:opacity-70 disabled:active:scale-100"
+                className="mt-2 inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-10 text-base font-bold text-white shadow-lg transition-all hover:bg-[var(--color-accent-strong)] hover:shadow-[var(--color-accent)]/30 active:scale-95 disabled:opacity-70 disabled:active:scale-100"
               >
                 {status === "loading" ? "Sending..." : "Send Message"}
               </button>
@@ -180,7 +180,7 @@ export function ContactPageContent() {
           </div>
 
           {/* Map */}
-          <div className="h-[500px] w-full overflow-hidden rounded-[2.5rem] shadow-[0_20px_60px_rgba(15,48,72,0.06)] lg:h-auto">
+          <div className="h-[500px] w-full overflow-hidden rounded-2xl shadow-[0_15px_50px_rgba(15,48,72,0.05)] border border-gray-100 lg:h-auto">
             <iframe
               src={siteConfig.mapUrl}
               width="100%"
@@ -190,7 +190,7 @@ export function ContactPageContent() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Our Location"
-              className="grayscale filter transition-all hover:grayscale-0 duration-500"
+              className="grayscale filter transition-all hover:grayscale-0 duration-700"
             ></iframe>
           </div>
         </div>
