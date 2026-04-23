@@ -68,14 +68,14 @@ export function ContactPageContent() {
   };
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-white py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
             Get in Touch
           </p>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#0f3048] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#0f3048] sm:text-5xl lg:text-[3.25rem]">
             We're Here to Help
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-[#526677]">
@@ -83,44 +83,8 @@ export function ContactPageContent() {
           </p>
         </div>
 
-        {/* Contact Info Cards */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col items-center rounded-3xl bg-[#f8fafc] p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-              <PhoneIcon className="h-7 w-7" />
-            </div>
-            <h3 className="mt-6 text-lg font-bold text-[#0f3048]">Phone</h3>
-            <p className="mt-2 text-[#526677]">{siteConfig.phone}</p>
-          </div>
-
-          <div className="flex flex-col items-center rounded-3xl bg-[#f8fafc] p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-              <MailIcon className="h-7 w-7" />
-            </div>
-            <h3 className="mt-6 text-lg font-bold text-[#0f3048]">Email</h3>
-            <p className="mt-2 text-[#526677]">{siteConfig.email}</p>
-          </div>
-
-          <div className="flex flex-col items-center rounded-3xl bg-[#f8fafc] p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-              <MapPinIcon className="h-7 w-7" />
-            </div>
-            <h3 className="mt-6 text-lg font-bold text-[#0f3048]">Location</h3>
-            <p className="mt-2 text-[#526677]">{siteConfig.address}</p>
-          </div>
-
-          <div className="flex flex-col items-center rounded-3xl bg-[#f8fafc] p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-              <ClockIcon className="h-7 w-7" />
-            </div>
-            <h3 className="mt-6 text-lg font-bold text-[#0f3048]">Emergency</h3>
-            <p className="mt-2 text-[#526677]">{siteConfig.emergencyPhone}</p>
-            <p className="text-[var(--color-accent)] font-semibold">{siteConfig.emergency}</p>
-          </div>
-        </div>
-
         {/* Form and Map Grid */}
-        <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-8">
+        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-8">
           {/* Form */}
           <div className="rounded-[2.5rem] bg-white p-8 shadow-[0_20px_60px_rgba(15,48,72,0.06)] sm:p-12">
             <h2 className="text-3xl font-bold text-[#0f3048]">Send us a message</h2>

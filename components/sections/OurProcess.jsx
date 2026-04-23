@@ -127,7 +127,7 @@ export function OurProcess() {
           <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
             How We Work
           </span>
-          <h2 className="mx-auto mt-4 max-w-2xl text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
+          <h2 className="mx-auto mt-4 max-w-2xl text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-4xl">
             Streamlined Process for Quality Results
           </h2>
 

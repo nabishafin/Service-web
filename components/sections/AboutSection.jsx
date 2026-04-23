@@ -97,7 +97,7 @@ export function AboutSection() {
               Expertise & Experience
             </p>
 
-            <h2 className="mt-4 w-full break-words text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
+            <h2 className="mx-auto mt-4 max-w-2xl text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2rem] lg:text-[2.25rem]">
               Years of Dedicated Quality Service
             </h2>
 

@@ -11,7 +11,7 @@ function RecognitionPanel() {
   return (
     <div className="absolute bottom-0 right-0 hidden w-full max-w-[33rem] rounded-tl-2xl border border-white/35 bg-[linear-gradient(90deg,rgba(201,194,189,0.62)_0%,rgba(44,63,90,0.82)_100%)] px-6 pb-5 pt-5 shadow-[0_24px_70px_rgba(0,0,0,0.24)] backdrop-blur-[10px] xl:block">
       <p className="max-w-[28rem] text-[1.1rem] font-extrabold leading-[1.15] tracking-[-0.03em] text-white">
-        Recognized for Excellence in Plumbing Services!
+        Recognized for Excellence in Professional Cleaning & Hospitality!
       </p>
 
       <div className="mt-5 flex items-end justify-between gap-3">
@@ -79,9 +79,9 @@ function RecognitionPanel() {
         <div className="flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white/25 bg-[rgba(255,255,255,0.28)] shadow-[0_6px_18px_rgba(0,0,0,0.14)]">
           <div className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white/70 text-center text-white/90">
             <div className="leading-none">
-              <p className="text-[5px] font-bold uppercase tracking-[0.12em]">Plumbing Services</p>
-              <p className="mt-1 text-[14px]">🔧</p>
-              <p className="mt-1 text-[5px] font-bold uppercase tracking-[0.08em]">Membership Guarantee</p>
+              <p className="text-[5px] font-bold uppercase tracking-[0.12em]">Premium Support</p>
+              <p className="mt-1 text-[14px]">✨</p>
+              <p className="mt-1 text-[5px] font-bold uppercase tracking-[0.08em]">ServiceFlow Guarantee</p>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export function HeroSection() {
     <section id="home-hero" className="relative min-h-[580px] overflow-hidden bg-slate-950 text-white sm:min-h-[740px] lg:min-h-[1050px]">
       <Image
         src="/images/6hZX53cd2BQPBn5f2U9LrdEHxw.png"
-        alt="Plumber repairing a kitchen faucet"
+        alt="Professional cleaning service"
         fill
         priority
         className="object-cover object-[right_top]"
@@ -106,24 +106,40 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent_30%)]" />
 
       {/* Content */}
-      <div className="relative mx-auto flex min-h-[580px] w-full items-center pb-12 pt-10 sm:min-h-[740px] sm:pb-16 sm:pt-12 lg:min-h-[1050px] lg:pb-24 lg:pt-14">
+      <div className="relative mx-auto flex min-h-[580px] w-full items-center pb-20 pt-16 sm:min-h-[740px] sm:pb-28 sm:pt-24 lg:min-h-[1050px] lg:pb-40 lg:pt-32">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="max-w-2xl">
             {/* Eyebrow */}
             <p className="mt-14 text-sm font-semibold text-[var(--color-accent)] sm:mt-16 sm:text-lg lg:text-xl">
-              Your Trusted Plumbing Experts
+              Professional & Reliable Solutions
             </p>
 
-            {/* Headline — scales from 2.4rem on mobile to 4.5rem on desktop */}
-            <h1 className="mt-4 max-w-xl text-[2.4rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:mt-6 sm:text-5xl lg:text-7xl">
+            {/* Headline — refined for a more premium feel */}
+            <h1 className="mt-4 max-w-xl text-[2.25rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:mt-6 sm:text-4xl lg:text-6xl">
               Professional Cleaning & Hospitality Services
             </h1>
 
             {/* Sub-copy */}
             <p className="mt-5 max-w-lg text-base leading-7 text-white/80 sm:mt-7 sm:text-lg sm:leading-8 lg:max-w-2xl lg:text-xl">
-              From house cleaning to premium event staff, our expert team is ready to deliver fast,
-              reliable solutions for your home and business.
+              Experience the ultimate convenience with ServiceFlow. From deep home cleaning and office maintenance to expert hospitality staffing and private chefs, we provide tailored, premium services that exceed expectations.
             </p>
+
+            {/* Added Content: Benefits List */}
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-10 lg:gap-4">
+              {[
+                "Certified & Background-Checked Staff",
+                "Eco-Friendly Cleaning Products",
+                "24/7 Support & Emergency Service",
+                "Fully Insured & Guaranteed Results"
+              ].map((benefit) => (
+                <div key={benefit} className="flex items-center gap-3">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/20 text-[var(--color-accent)]">
+                    <CheckIcon className="h-3.5 w-3.5" />
+                  </div>
+                  <span className="text-sm font-medium text-white/90 sm:text-base">{benefit}</span>
+                </div>
+              ))}
+            </div>
 
             {/* CTA Buttons — stacked on mobile, row on sm+ */}
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">

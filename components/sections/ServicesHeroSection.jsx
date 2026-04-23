@@ -7,7 +7,7 @@ export function ServicesHeroSection() {
       {/* Background image */}
       <Image
         src="/images/6hZX53cd2BQPBn5f2U9LrdEHxw.png"
-        alt="Professional plumbing services"
+        alt="Professional cleaning and hospitality services"
         fill
         priority
         className="object-cover object-center"
@@ -32,13 +32,13 @@ export function ServicesHeroSection() {
         </p>
 
         {/* Headline */}
-        <h1 className="mt-4 max-w-2xl text-[2.2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-5xl lg:text-[3.75rem]">
+        <h1 className="mt-4 max-w-2xl text-[2.2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-5xl lg:text-5xl">
           Our Services
         </h1>
 
         {/* Sub-copy */}
         <p className="mt-5 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
-          Professional plumbing solutions for every need — from emergency repairs to complete installations, delivered fast and done right.
+          Professional solutions for every need — from deep cleaning and maintenance to expert event staffing and hospitality support.
         </p>
 
         {/* Decorative bottom bar */}

@@ -6,24 +6,24 @@ import { useState } from "react";
 const reasons = [
   {
     id: 1,
-    title: "Skilled & Certified Plumbers",
-    description: "Our team consists of certified, licensed plumbers with extensive experience.",
+    title: "Skilled & Certified Professionals",
+    description: "Our team consists of background-checked, highly trained professionals with extensive industry experience.",
     icon: (
-      <Image src="/images/fSXw5NAa4SYRsOryJB42DNb1U.svg" alt="Skilled & Certified Plumbers" width={52} height={52} className="object-contain" />
+      <Image src="/images/fSXw5NAa4SYRsOryJB42DNb1U.svg" alt="Skilled & Certified Professionals" width={52} height={52} className="object-contain" />
     ),
   },
   {
     id: 2,
-    title: "Clear & Honest Pricing",
-    description: "We believe in honesty and transparency with our customers. When you choose PlumbFlow.",
+    title: "Transparent & Honest Pricing",
+    description: "We provide clear, upfront quotes with no hidden fees. You always know exactly what to expect from ServiceFlow.",
     icon: (
       <Image src="/images/JfBzkZnCKP2TNf96vcQLi6bEY.svg" alt="Clear & Honest Pricing" width={52} height={52} className="object-contain" />
     ),
   },
   {
     id: 3,
-    title: "24/7 Emergency Services",
-    description: "Plumbing problems don't always happen during business hours, which is why we offer.",
+    title: "24/7 Premium Support",
+    description: "We understand that needs can arise at any time, which is why we offer around-the-clock emergency service and support.",
     icon: (
       <Image src="/images/Eem3jlg3FPNI5ba8uZlajCzw.svg" alt="24/7 Emergency Services" width={52} height={52} className="object-contain" />
     ),
@@ -38,10 +38,10 @@ export function WhyChooseUsSection() {
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            The PlumbFlow Advantage
+            The ServiceFlow Advantage
           </p>
-          <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
-            Why Homeowners Prefer Our Plumbing Expertise
+          <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-4xl">
+            Why Clients Prefer Our Professional Expertise
           </h2>
         </div>
 
@@ -52,7 +52,7 @@ export function WhyChooseUsSection() {
               <>
                 <Image
                   src="/images/Kpvz8XbHV38RHiTdldTScmM.jpg"
-                  alt="Plumbers working together"
+                  alt="Service professionals at work"
                   fill
                   className="object-cover cursor-pointer"
                   onClick={() => setIsVideoPlaying(true)}
