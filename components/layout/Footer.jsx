@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { LogoMark } from "@/components/ui/LogoMark";
-import { 
-  FacebookIcon, 
-  InstagramIcon, 
-  TwitterIcon, 
-  YouTubeIcon, 
-  PhoneIcon, 
-  MailIcon, 
-  MapPinIcon 
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  YouTubeIcon,
+  PhoneIcon,
+  MailIcon,
+  MapPinIcon
 } from "@/components/ui/Icons";
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <h2 className="text-center text-[1.5rem] font-bold leading-tight tracking-tight sm:text-[1.75rem] md:text-left md:max-w-xl md:text-[2.25rem]">
-              Get 24/7 Emergency Plumbing Help — Call Today!
+              Get Professional Cleaning & Hospitality Help — Call Today!
             </h2>
             <a
               href="tel:+11245678900"
@@ -43,10 +43,10 @@ export function Footer() {
             <div className="flex flex-col gap-6">
               <Link href="/" className="flex items-center gap-3 text-white">
                 <LogoMark />
-                <span className="text-3xl font-extrabold tracking-tight">PlumbFlow</span>
+                <span className="text-3xl font-extrabold tracking-tight">ServiceFlow</span>
               </Link>
               <p className="max-w-xs text-base leading-relaxed text-gray-400">
-                Plumbflow provides top-quality plumbing services, from emergency repairs to full installations trust our certified.
+                ServiceFlow provides top-quality cleaning and hospitality services, from deep cleaning to event staffing by certified professionals.
               </p>
               <div className="flex items-center gap-4">
                 <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
@@ -68,9 +68,8 @@ export function Footer() {
             <div>
               <h3 className="mb-8 text-lg font-bold text-white">Quick Links</h3>
               <ul className="space-y-4 text-base font-medium text-gray-400">
-                <li><Link href="#about" className="transition hover:text-white">About Us</Link></li>
+                <li><Link href="/" className="transition hover:text-white">Home</Link></li>
                 <li><Link href="/services" className="transition hover:text-white">Services</Link></li>
-                <li><Link href="#blog" className="transition hover:text-white">Blog</Link></li>
                 <li><Link href="#contact" className="transition hover:text-white">Contact Us</Link></li>
                 <li><Link href="/404" className="transition hover:text-white">404</Link></li>
               </ul>

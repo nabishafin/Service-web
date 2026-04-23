@@ -4,25 +4,23 @@ import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata = {
-  title: "Our Services | PlumbFlow — Professional Plumbing Solutions",
+  title: "Our Services | ServiceFlow — Professional Cleaning & Hospitality",
   description:
-    "Explore PlumbFlow's full range of plumbing services — emergency repairs, pipe repair, drain cleaning, water heaters, leak detection, bathroom & kitchen plumbing, and more.",
+    "Explore ServiceFlow's full range of professional services — from house and office cleaning to premium hospitality and event staffing.",
   keywords: [
-    "plumbing services",
-    "emergency plumbing",
-    "pipe repair",
-    "drain cleaning",
-    "leak detection",
-    "water heater installation",
-    "bathroom plumbing",
-    "kitchen plumbing",
+    "cleaning services",
+    "hospitality",
+    "housekeeping",
+    "catering",
+    "chef services",
+    "waiter service",
   ],
   openGraph: {
-    title: "Our Services | PlumbFlow",
+    title: "Our Services | ServiceFlow",
     description:
-      "Fast, certified plumbing services for every need. Get a free quote today.",
-    url: "https://plumbflow.com/services",
-    siteName: "PlumbFlow",
+      "Expert cleaning and hospitality services for every need. Get a free quote today.",
+    url: "https://serviceflow.com/services",
+    siteName: "ServiceFlow",
     locale: "en_US",
     type: "website",
   },

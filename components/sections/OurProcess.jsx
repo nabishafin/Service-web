@@ -5,33 +5,33 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Contact Us",
+    title: "Consultation & Booking",
     description:
-      "Getting started with PlumbFlow is quick and hassle-free. Whether you're dealing with a leak, clogged drain, or any plumbing emergency, reaching out to us is the first step.",
+      "Start by reaching out to ServiceFlow. We discuss your specific needs and schedule a service time that fits perfectly with your home or business schedule.",
   },
   {
     number: "02",
-    title: "Inspection & Diagnosis",
+    title: "On-Site Assessment",
     description:
-      "Once you reach out to PlumbFlow, our expert plumbers arrive promptly to assess your plumbing issue with precision and care. Using advanced diagnostic tools and years of hands-on.",
+      "Our professional team arrives promptly to evaluate the space and identify any specific requirements or areas needing extra attention to ensure a perfect result.",
   },
   {
     number: "03",
-    title: "Service & Repairs",
+    title: "Professional Service",
     description:
-      "At PlumbFlow, we prioritize efficiency and precision in every plumbing repair. Once our expert plumbers assess the issue, we get to work immediately using industry-leading.",
+      "We execute the service using industry-leading equipment and specialized techniques, whether it's deep cleaning, hospitality support, or facility maintenance.",
   },
   {
     number: "04",
-    title: "Quality Check & Cleanup",
+    title: "Quality Inspection",
     description:
-      "At PlumbFlow, we believe that a job isn't truly complete until it's done right! Our Quality Check & Cleanup process ensures that every plumbing repair or installation meets.",
+      "We believe a job isn't done until it's perfect. Our supervisors conduct a thorough quality check to ensure every standard of excellence has been met.",
   },
   {
     number: "05",
-    title: "Customer Satisfaction",
+    title: "Client Satisfaction",
     description:
-      "At PlumbFlow, we prioritize your satisfaction from the moment you contact us. Our team is dedicated to delivering top-tier service and providing the best possible solution.",
+      "We walk through the results with you to ensure complete satisfaction. Your feedback is vital to maintaining our premium service standards.",
   },
 ];
 
@@ -151,10 +151,10 @@ export function OurProcess() {
           variants={containerVariants}
         >
           {/* Vertical Line - Hidden on mobile, visible on lg */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)] via-[#2a3a4f] to-[#2a3a4f] lg:block" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-[var(--color-accent)] via-[#e2e8f0] to-[#e2e8f0] lg:block" />
 
           {/* Mobile Vertical Line */}
-          <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-accent)] via-[#2a3a4f] to-[#2a3a4f] lg:hidden" />
+          <div className="absolute left-4 top-0 h-full w-0.5 bg-gradient-to-b from-[var(--color-accent)] via-[#e2e8f0] to-[#e2e8f0] lg:hidden" />
 
           <ol className="relative space-y-8 lg:space-y-12">
             {steps.map((step, index) => {

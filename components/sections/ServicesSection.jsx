@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { serviceItems } from "@/lib/services-data";
 
 function ArrowRightIcon({ className = "" }) {
@@ -24,8 +25,16 @@ function ArrowRightIcon({ className = "" }) {
 }
 
 export function ServicesSection() {
-  const [activeServiceId, setActiveServiceId] =
-    useState("emergency-plumbing");
+  const [activeTab, setActiveTab] = useState("cleaning");
+  const [activeServiceId, setActiveServiceId] = useState("house-cleaning");
+
+  // Group services for better navigation
+  const filteredServices = useMemo(() => {
+    if (activeTab === "cleaning") {
+      return serviceItems.slice(0, 8); // First 8 are cleaning
+    }
+    return serviceItems.slice(8); // Rest are hospitality
+  }, [activeTab]);
 
   const activeService = useMemo(
     () => serviceItems.find((service) => service.id === activeServiceId) ?? serviceItems[0],
@@ -33,76 +42,113 @@ export function ServicesSection() {
   );
 
   return (
-    <section id="services" className="bg-[#f5f7fd] py-18 sm:py-22 lg:py-24">
+    <section id="services" className="bg-[#f8fafc] py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
-            <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[#ff6017]">
-              Expert Services
+          <div className="max-w-2xl">
+            <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+              Our Expertise
             </p>
-            <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
-              Fast & Reliable Solutions for Every Plumbing Need
+            <h2 className="mt-4 text-[2.5rem] font-extrabold leading-[1.1] tracking-tight text-[#0f3048] sm:text-[3.5rem]">
+              Premium Solutions for Every Need
             </h2>
           </div>
-
+          
           <Link
             href="/services"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-8 text-lg font-bold text-white shadow-[0_16px_34px_rgba(255,111,36,0.28)] transition hover:bg-[var(--color-accent-strong)]"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-10 text-lg font-bold text-white shadow-[0_12px_24px_rgba(255,111,36,0.2)] transition-all hover:bg-[var(--color-accent-strong)] hover:shadow-[0_15px_30px_rgba(255,111,36,0.3)] active:scale-95"
           >
-            View All Service
+            View All Services
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.4fr)] lg:items-start">
-          <ul className="flex flex-col">
-            {serviceItems.map((service) => {
-              const isActive = service.id === activeServiceId;
+        {/* Category Toggles */}
+        <div className="mt-12 flex justify-center">
+          <div className="inline-flex rounded-2xl bg-gray-100 p-1.5">
+            <button
+              onClick={() => {
+                setActiveTab("cleaning");
+                setActiveServiceId(serviceItems[0].id);
+              }}
+              className={`rounded-xl px-8 py-3 text-lg font-bold transition-all ${
+                activeTab === "cleaning"
+                  ? "bg-white text-[var(--color-accent)] shadow-md"
+                  : "text-[#526677] hover:text-[#0f3048]"
+              }`}
+            >
+              Cleaning Services
+            </button>
+            <button
+              onClick={() => {
+                setActiveTab("hospitality");
+                setActiveServiceId(serviceItems[8].id);
+              }}
+              className={`rounded-xl px-8 py-3 text-lg font-bold transition-all ${
+                activeTab === "hospitality"
+                  ? "bg-white text-[var(--color-accent)] shadow-md"
+                  : "text-[#526677] hover:text-[#0f3048]"
+              }`}
+            >
+              Hospitality & Support
+            </button>
+          </div>
+        </div>
 
+        <div className="mt-16 grid gap-12 lg:grid-cols-[450px_1fr] lg:items-center">
+          {/* Left Column - List */}
+          <div className="space-y-2">
+            {filteredServices.map((service) => {
+              const isActive = service.id === activeServiceId;
               return (
-                <li key={service.id}>
-                  <button
-                    type="button"
-                    className={`group flex w-full items-center gap-4 border-b border-transparent py-7 text-left transition first:pt-4 last:border-b-0 ${isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
-                      }`}
-                    onClick={() => setActiveServiceId(service.id)}
-                  >
-                    <ArrowRightIcon
-                      className={`h-6 w-6 shrink-0 transition ${isActive ? "text-[var(--color-accent)]" : "text-[#4f5d63]"
-                        }`}
-                    />
-                    <span className="text-[1.2rem] font-semibold leading-none tracking-[-0.02em] sm:text-[1.75rem]">
-                      {service.title}
-                    </span>
-                  </button>
-                </li>
+                <button
+                  key={service.id}
+                  onClick={() => setActiveServiceId(service.id)}
+                  className={`group flex w-full items-center justify-between rounded-2xl p-5 text-left transition-all duration-300 ${
+                    isActive
+                      ? "bg-[var(--color-accent)] text-white shadow-xl shadow-[var(--color-accent)]/20 translate-x-4"
+                      : "bg-white border border-gray-100 text-[#526677] hover:border-[var(--color-accent)]/30 hover:bg-gray-50"
+                  }`}
+                >
+                  <span className="text-xl font-bold">{service.title}</span>
+                  <ArrowRightIcon className={`h-5 w-5 transition-transform ${isActive ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"}`} />
+                </button>
               );
             })}
-          </ul>
+          </div>
 
-          <div className="overflow-hidden rounded-2xl bg-[#dfe5ee]">
-            <div className="relative min-h-[22rem] sm:min-h-[28rem] lg:min-h-[30.25rem]">
-              <Image
-                key={activeService.id}
-                src={activeService.image.src}
-                alt={activeService.image.alt}
-                width={activeService.image.width}
-                height={activeService.image.height}
-                className="absolute inset-0 h-full w-full object-cover transition duration-500"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_28%,rgba(0,0,0,0.74)_100%)]" />
-
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <p className="max-w-[45rem] text-base leading-8 text-white/92 sm:text-[1.05rem]">
-                  {activeService.description}
-                </p>
-
-                <Link
-                  href={`/services/${activeService.id}`}
-                  className="mt-5 inline-flex h-13 items-center justify-center rounded-full bg-[var(--color-accent)] px-7 text-lg font-bold text-white shadow-[0_14px_28px_rgba(255,111,36,0.28)] transition hover:bg-[var(--color-accent-strong)]"
+          {/* Right Column - Large Interactive Card */}
+          <div className="relative aspect-[16/10] overflow-hidden rounded-[2.5rem] bg-[#0f3048] shadow-2xl lg:aspect-auto lg:h-[600px]">
+            <Image
+              key={activeService.id}
+              src={activeService.image.src}
+              alt={activeService.image.alt}
+              fill
+              className="object-cover transition-all duration-700 hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0f3048] via-[#0f3048]/20 to-transparent" />
+            
+            <div className="absolute inset-x-0 bottom-0 p-8 sm:p-12">
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={activeService.id}
+                  initial={{ opacity: 0, y: 20 }} 
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
                 >
-                  Learn More
-                </Link>
-              </div>
+                  <h3 className="text-3xl font-extrabold text-white sm:text-4xl">{activeService.title}</h3>
+                  <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/80">
+                    {activeService.description}
+                  </p>
+                  <Link
+                    href={`/services/${activeService.id}`}
+                    className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-10 text-lg font-bold text-white shadow-lg transition-all hover:bg-[var(--color-accent-strong)] hover:shadow-[var(--color-accent)]/40 active:scale-95"
+                  >
+                    Explore Service Details
+                  </Link>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>

@@ -116,13 +116,13 @@ export function HeroSection() {
 
             {/* Headline — scales from 2.4rem on mobile to 4.5rem on desktop */}
             <h1 className="mt-4 max-w-xl text-[2.4rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:mt-6 sm:text-5xl lg:text-7xl">
-              Fast Solutions for Plumbing Problems
+              Professional Cleaning & Hospitality Services
             </h1>
 
             {/* Sub-copy */}
             <p className="mt-5 max-w-lg text-base leading-7 text-white/80 sm:mt-7 sm:text-lg sm:leading-8 lg:max-w-2xl lg:text-xl">
-              From minor leaks to major plumbing emergencies, our expert team is ready to deliver fast,
-              reliable affordable solutions ensuring.
+              From house cleaning to premium event staff, our expert team is ready to deliver fast,
+              reliable solutions for your home and business.
             </p>
 
             {/* CTA Buttons — stacked on mobile, row on sm+ */}

@@ -57,10 +57,10 @@ export function ServicesGridSection() {
             Expert Services
           </p>
           <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
-            Fast &amp; Reliable Solutions for Every Plumbing Need
+            Fast &amp; Reliable Solutions for Your Home &amp; Business
           </h2>
           <p className="mt-5 text-base leading-relaxed text-[#66737d] sm:text-[1.05rem]">
-            From minor leaks to full system overhauls, our certified plumbers are equipped and ready to handle any job — on time and on budget.
+            From house cleaning to professional event staffing, our expert team is ready to handle any job — on time and on budget.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export function ServicesGridSection() {
                 }
               >
               <Link href={`/services/${service.id}`} className="group block h-full">
-                <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_4px_24px_rgba(24,52,79,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(24,52,79,0.13)]">
+                <article className="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_24px_rgba(24,52,79,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(24,52,79,0.13)]">
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden bg-[#dfe5ee]">
                     <Image
@@ -134,7 +134,7 @@ export function ServicesGridSection() {
         {/* Bottom CTA — shown after all loaded */}
         <div className="mt-14 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center">
           <p className="text-base font-medium text-[#66737d]">
-            Need an emergency plumber right now?
+            Need professional services right now?
           </p>
           <a
             href="tel:+11245678900"

@@ -3,6 +3,7 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,25 +17,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PlumbFlow | Professional Plumbing Services & Emergency Repairs",
-  description: "Certified plumbing experts for emergency repairs, leak detection, and installations. 24/7 support for all your home and commercial plumbing needs.",
-  keywords: ["plumbing", "emergency plumber", "leak detection", "pipe repair", "drain cleaning"],
+  title: "ServiceFlow | Professional Cleaning & Hospitality Services",
+  description: "Expert cleaning and hospitality staff for homes, offices, and events. Reliable, certified professionals at your service.",
+  keywords: ["cleaning services", "hospitality staff", "office cleaning", "event catering", "housekeeping"],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "PlumbFlow | Expert Plumbing Solutions",
-    description: "Reliable, fast, and professional plumbing services available 24/7.",
-    url: "https://plumbflow.com",
-    siteName: "PlumbFlow",
+    title: "ServiceFlow | Professional Cleaning & Hospitality",
+    description: "Expert cleaning and hospitality staff for homes, offices, and events.",
+    url: "https://serviceflow.com",
+    siteName: "ServiceFlow",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PlumbFlow | Expert Plumbing Solutions",
-    description: "Fast and reliable plumbing experts at your service.",
+    title: "ServiceFlow | Professional Cleaning & Hospitality",
+    description: "Expert cleaning and hospitality staff for homes, offices, and events.",
   },
 };
 
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         </header>
         <SmoothScroll>{children}</SmoothScroll>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

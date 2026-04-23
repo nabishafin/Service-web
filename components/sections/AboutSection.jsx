@@ -138,7 +138,7 @@ export function AboutSection() {
           </div>
         </div>
 
-        <ul className="mt-18 grid gap-10 border-t border-transparent pt-4 sm:grid-cols-2 lg:mt-22 lg:grid-cols-4">
+        {/* <ul className="mt-18 grid gap-10 border-t border-transparent pt-4 sm:grid-cols-2 lg:mt-22 lg:grid-cols-4">
           {aboutStats.map((stat) => (
             <li key={stat.label}>
               <AnimatedStat
@@ -149,7 +149,7 @@ export function AboutSection() {
               />
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

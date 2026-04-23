@@ -19,14 +19,8 @@ export function ServiceDetailHero({ service }) {
 
       {/* Content */}
       <div className="relative mx-auto flex min-h-[340px] w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-white/60">
-          <Link href="/" className="transition hover:text-white">Home</Link>
-          <span className="text-white/30">/</span>
-          <Link href="/services" className="transition hover:text-white">Services</Link>
-          <span className="text-white/30">/</span>
-          <span className="text-[var(--color-accent)]">{service.title}</span>
-        </nav>
+
+
 
         {/* Headline */}
         <h1 className="mt-4 max-w-2xl text-[2.2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-5xl lg:text-[3.75rem]">

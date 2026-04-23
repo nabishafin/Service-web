@@ -53,7 +53,7 @@ export function Navbar() {
           <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3 text-white">
             <LogoMark />
-            <span className="text-3xl font-extrabold tracking-tight">PlumbFlow</span>
+            <span className="text-3xl font-extrabold tracking-tight">ServiceFlow</span>
           </Link>
         </div>
 

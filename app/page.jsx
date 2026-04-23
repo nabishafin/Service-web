@@ -6,7 +6,6 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { OurProcess } from "@/components/sections/OurProcess";
 import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
 import { ServiceGallerySection } from "@/components/sections/ServiceGallerySection";
-import { BlogSection } from "@/components/sections/BlogSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
@@ -21,12 +20,11 @@ export default function Home() {
 
       <ServicesSection />
       {/* Our process */}
-      <OurProcess />  
+      <OurProcess />
       <WhyChooseUsSection />
       <TestimonialsSection />
       <ServiceGallerySection />
       <ContactSection />
-      <BlogSection />
     </main>
   );
 }
