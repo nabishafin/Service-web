@@ -34,13 +34,13 @@ export function WhyChooseUsSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="bg-white py-20 lg:py-32">
+    <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+          <p className="text-[0.8rem] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
             The ServiceFlow Advantage
           </p>
-          <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-4xl">
+          <h2 className="mt-4 text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2rem] lg:text-[2.25rem]">
             Why Clients Prefer Our Professional Expertise
           </h2>
         </div>

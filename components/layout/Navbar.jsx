@@ -12,7 +12,7 @@ export function Navbar() {
   const [isAtTop, setIsAtTop] = useState(false);
   const [hasPassedHero, setHasPassedHero] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const navbarHeight = 86;
+  const navbarHeight = 76;
 
   useEffect(() => {
     const updateNavbarState = () => {
@@ -51,16 +51,16 @@ export function Navbar() {
       }`}
       onMouseLeave={() => setActiveDropdown(null)}
     >
-      <nav className="mx-auto h-[86px] w-full">
+      <nav className="mx-auto h-[76px] w-full">
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link href="/" className="flex items-center gap-3 text-white">
               <LogoMark />
-              <span className="text-3xl font-extrabold tracking-tight">ServiceFlow</span>
+              <span className="text-2xl font-extrabold tracking-tight">ServiceFlow</span>
             </Link>
           </div>
 
-          <ul className="hidden items-center gap-10 text-base font-semibold text-white/90 lg:flex">
+          <ul className="hidden items-center gap-8 text-sm font-semibold text-white/90 lg:flex">
             {navigationItems.map((item) => (
               <li 
                 key={item.label} 
@@ -69,7 +69,7 @@ export function Navbar() {
               >
                 <a 
                   href={item.href} 
-                  className={`inline-flex items-center gap-1 transition-all duration-200 py-8 ${
+                  className={`inline-flex items-center gap-1 transition-all duration-200 py-7 ${
                     activeDropdown === item.label ? "text-white" : "hover:text-white"
                   }`}
                 >
@@ -85,7 +85,7 @@ export function Navbar() {
           <div className="flex items-center justify-end gap-10 lg:flex-1">
             <a
               href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
-              className="hidden items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-4 text-base font-bold text-white shadow-[0_16px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)] lg:inline-flex"
+              className="hidden items-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-bold text-white shadow-[0_16px_40px_rgba(255,111,36,0.3)] transition hover:bg-[var(--color-accent-strong)] lg:inline-flex"
             >
               <PhoneIcon className="h-4 w-4" />
               <span>{siteConfig.phone}</span>
@@ -96,19 +96,19 @@ export function Navbar() {
             type="button"
             aria-expanded={menuOpen}
             aria-label="Toggle navigation menu"
-            className={`inline-flex h-12 w-12 items-center justify-center rounded-full border text-white backdrop-blur lg:hidden ${
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-full border text-white backdrop-blur lg:hidden ${
               hasPassedHero ? "border-white/10 bg-white/10" : "border-white/20 bg-white/10"
             }`}
             onClick={() => setMenuOpen((current) => !current)}
           >
-            {menuOpen ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
+            {menuOpen ? <CloseIcon className="h-4 w-4" /> : <MenuIcon className="h-4 w-4" />}
           </button>
         </div>
       </nav>
 
       {/* Mega Menu Dropdown */}
       {activeDropdown === "Services" && (
-        <div className="absolute left-0 top-[86px] w-full border-t border-white/10 bg-[var(--color-navy)] py-10 shadow-2xl">
+        <div className="absolute left-0 top-[76px] w-full border-t border-white/10 bg-[var(--color-navy)] py-8 shadow-2xl">
           <div className="mx-auto max-w-7xl px-8">
             <div className="grid grid-cols-4 gap-x-12 gap-y-10">
               <div className="col-span-1">

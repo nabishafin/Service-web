@@ -111,7 +111,7 @@ function CheckIcon({ className }) {
 
 export function OurProcess() {
   return (
-    <section className="relative overflow-hidden bg-white py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-white py-16 lg:py-24">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white" />
 
@@ -124,10 +124,10 @@ export function OurProcess() {
           viewport={{ once: false, margin: "-100px" }}
           variants={headerVariants}
         >
-          <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+          <span className="text-[0.8rem] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
             How We Work
           </span>
-          <h2 className="mx-auto mt-4 max-w-2xl text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-4xl">
+          <h2 className="mx-auto mt-4 max-w-2xl text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2rem] lg:text-[2.25rem]">
             Streamlined Process for Quality Results
           </h2>
 

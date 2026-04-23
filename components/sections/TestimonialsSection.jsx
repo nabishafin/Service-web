@@ -60,13 +60,13 @@ export function TestimonialsSection() {
   }, [activeIndex, isDesktop]);
 
   return (
-    <section className="bg-[var(--color-navy)] py-20 text-white lg:py-32">
+    <section className="bg-[var(--color-navy)] py-16 text-white lg:py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center">
-          <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+          <p className="text-[0.8rem] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
             Customer Voice
           </p>
-          <h2 className="mx-auto mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[2.5rem] lg:text-[3.25rem]">
+          <h2 className="mx-auto mt-4 text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-white sm:text-[2rem] lg:text-[2.5rem]">
             Trusted by Homeowners Across the Region
           </h2>
         </div>
@@ -75,27 +75,29 @@ export function TestimonialsSection() {
           {visibleTestimonials.map((testimonial) => (
             <article
               key={testimonial.id}
-              className="flex h-full flex-col rounded-2xl bg-white px-7 py-8 text-[#18344f] shadow-[0_24px_60px_rgba(9,20,32,0.16)] sm:px-9 sm:py-10"
+              className="flex h-full flex-col rounded-2xl bg-white px-7 py-8 text-[#18344f] shadow-[0_24px_60px_rgba(9,20,32,0.16)] sm:px-8 sm:py-9"
             >
-              <div className="flex items-center gap-2 text-[var(--color-accent)]">
+              <div className="flex items-center gap-1.5 text-[var(--color-accent)]">
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <StarIcon key={index} />
+                  <svg key={index} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-5 w-5 sm:h-6 sm:w-6">
+                    <path d="m12 2.7 2.87 5.82 6.43.94-4.65 4.53 1.1 6.4L12 17.34 6.25 20.4l1.1-6.4L2.7 9.46l6.43-.94L12 2.7Z" />
+                  </svg>
                 ))}
               </div>
 
-              <p className="mt-7 grow text-[1.05rem] leading-9 text-[#18344f] sm:text-[1.1rem]">
+              <p className="mt-6 grow text-base leading-8 text-[#18344f] sm:text-[1.05rem]">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
-              <div className="mt-8 flex flex-col gap-6 border-t border-transparent pt-2 sm:flex-row sm:items-end sm:justify-between">
-                <div className="flex items-center gap-5">
+              <div className="mt-8 flex flex-col gap-6 border-t border-gray-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-4">
                   <div className="relative">
                     <Image
                       src={testimonial.avatar.src}
                       alt={testimonial.avatar.alt}
                       width={testimonial.avatar.width}
                       height={testimonial.avatar.height}
-                      className="h-16 w-16 rounded-full object-cover sm:h-18 sm:w-18"
+                      className="h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14"
                     />
                     <QuoteBadge />
                   </div>

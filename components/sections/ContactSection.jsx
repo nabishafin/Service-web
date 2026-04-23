@@ -50,18 +50,18 @@ export function ContactSection() {
   return (
     <section id="contact" className="relative flex flex-col">
       {/* Top Dark Background Segment */}
-      <div className="relative h-[26rem] w-full bg-[#0a1622] sm:h-[32rem]">
+      <div className="relative h-[22rem] w-full bg-[#0a1622] sm:h-[28rem]">
         <Image
           src="/images/EM4AaWEyJ9wPPFWwzQyNNn56cU.png"
           alt="Contact background"
           fill
           className="object-cover opacity-95"
         />
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-start px-6 pt-20 text-center sm:px-10 sm:pt-28 lg:px-12 lg:pt-36">
-          <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--color-accent)]">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-start px-6 pt-16 text-center sm:px-10 sm:pt-20 lg:px-12 lg:pt-28">
+          <p className="text-[0.8rem] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
             Contact Us
           </p>
-          <h2 className="mt-4 max-w-2xl text-[1.75rem] font-semibold leading-tight tracking-tight text-white sm:text-[2.5rem] lg:text-4xl">
+          <h2 className="mt-4 max-w-2xl text-[1.5rem] font-bold leading-tight tracking-tight text-white sm:text-[2rem] lg:text-[2.25rem]">
             Book Expert Service Today!
           </h2>
         </div>

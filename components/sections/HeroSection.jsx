@@ -92,7 +92,7 @@ function RecognitionPanel() {
 
 export function HeroSection() {
   return (
-    <section id="home-hero" className="relative min-h-[580px] overflow-hidden bg-slate-950 text-white sm:min-h-[740px] lg:min-h-[1050px]">
+    <section id="home-hero" className="relative min-h-[500px] overflow-hidden bg-slate-950 text-white sm:min-h-[640px] lg:min-h-[900px]">
       <Image
         src="/images/6hZX53cd2BQPBn5f2U9LrdEHxw.png"
         alt="Professional cleaning service"
@@ -106,21 +106,21 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent_30%)]" />
 
       {/* Content */}
-      <div className="relative mx-auto flex min-h-[580px] w-full items-center pb-20 pt-16 sm:min-h-[740px] sm:pb-28 sm:pt-24 lg:min-h-[1050px] lg:pb-40 lg:pt-32">
+      <div className="relative mx-auto flex min-h-[500px] w-full items-center pb-16 pt-12 sm:min-h-[640px] sm:pb-20 sm:pt-20 lg:min-h-[900px] lg:pb-32 lg:pt-24">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="max-w-2xl">
             {/* Eyebrow */}
-            <p className="mt-14 text-sm font-semibold text-[var(--color-accent)] sm:mt-16 sm:text-lg lg:text-xl">
+            <p className="mt-14 text-sm font-semibold text-[var(--color-accent)] sm:mt-16 sm:text-base lg:text-lg">
               Professional & Reliable Solutions
             </p>
 
             {/* Headline — refined for a more premium feel */}
-            <h1 className="mt-4 max-w-xl text-[2.25rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:mt-6 sm:text-4xl lg:text-6xl">
+            <h1 className="mt-4 max-w-xl text-[2rem] font-extrabold leading-[1.1] tracking-tight text-white sm:mt-6 sm:text-3xl lg:text-[3.5rem]">
               Professional Cleaning & Hospitality Services
             </h1>
 
             {/* Sub-copy */}
-            <p className="mt-5 max-w-lg text-base leading-7 text-white/80 sm:mt-7 sm:text-lg sm:leading-8 lg:max-w-2xl lg:text-xl">
+            <p className="mt-5 max-w-lg text-sm leading-6 text-white/80 sm:mt-7 sm:text-base sm:leading-7 lg:max-w-xl lg:text-lg">
               Experience the ultimate convenience with ServiceFlow. From deep home cleaning and office maintenance to expert hospitality staffing and private chefs, we provide tailored, premium services that exceed expectations.
             </p>
 
@@ -133,8 +133,8 @@ export function HeroSection() {
                 "Fully Insured & Guaranteed Results"
               ].map((benefit) => (
                 <div key={benefit} className="flex items-center gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/20 text-[var(--color-accent)]">
-                    <CheckIcon className="h-3.5 w-3.5" />
+                  <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/20 text-[var(--color-accent)]">
+                    <CheckIcon className="h-3 w-3" />
                   </div>
                   <span className="text-sm font-medium text-white/90 sm:text-base">{benefit}</span>
                 </div>
@@ -145,13 +145,13 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-7 py-3.5 text-base font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)] sm:px-8 sm:py-4 sm:text-lg"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-7 py-3 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.3)] transition hover:bg-[var(--color-accent-strong)] sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Get a Free Quote
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/65 bg-white/5 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-lg"
+                className="inline-flex items-center justify-center rounded-full border border-white/60 bg-white/5 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/10 sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Contact Us Today
               </a>

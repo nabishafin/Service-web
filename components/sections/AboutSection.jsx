@@ -78,7 +78,7 @@ export function AboutSection() {
   );
 
   return (
-    <section id="about" ref={sectionRef} className="bg-white py-16 lg:py-32">
+    <section id="about" ref={sectionRef} className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
           <div className="overflow-hidden rounded-2xl bg-[#eef2f7]">
@@ -93,11 +93,11 @@ export function AboutSection() {
           </div>
 
           <div className="pt-2 min-w-0">
-            <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+            <p className="text-[0.8rem] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
               Expertise & Experience
             </p>
 
-            <h2 className="mx-auto mt-4 max-w-2xl text-[1.75rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2rem] lg:text-[2.25rem]">
+            <h2 className="mx-auto mt-4 max-w-2xl text-[1.5rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[1.75rem] lg:text-[2rem]">
               Years of Dedicated Quality Service
             </h2>
 
