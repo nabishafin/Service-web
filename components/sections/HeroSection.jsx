@@ -192,13 +192,13 @@ export function HeroSection() {
       </div>
 
       {/* Recognition panel — xl only, positioned absolutely */}
-      <div className="pointer-events-none absolute inset-0 mx-auto w-full">
+      {/* <div className="pointer-events-none absolute inset-0 mx-auto w-full">
         <div className="relative mx-auto h-full w-full max-w-7xl px-6 sm:px-10 lg:px-12">
           <div className="pointer-events-auto">
             <RecognitionPanel />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
