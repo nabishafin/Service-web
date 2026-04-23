@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { serviceItems } from "@/lib/services-data";
+import { siteConfig } from "@/lib/site-data";
 
 const INITIAL_COUNT = 6;
 
@@ -137,10 +138,10 @@ export function ServicesGridSection() {
             Need professional services right now?
           </p>
           <a
-            href="tel:+11245678900"
+            href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
             className="inline-flex h-12 items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 text-base font-bold text-white shadow-[0_12px_30px_rgba(255,96,23,0.28)] transition hover:bg-[var(--color-accent-strong)]"
           >
-            Call (124) 567 8900
+            Call {siteConfig.phone}
           </a>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { navigationItems } from "@/lib/site-data";
+import { navigationItems, siteConfig } from "@/lib/site-data";
 import { ChevronDownIcon, CloseIcon, MenuIcon, PhoneIcon } from "@/components/ui/Icons";
 import { LogoMark } from "@/components/ui/LogoMark";
 
@@ -70,11 +70,11 @@ export function Navbar() {
 
         <div className="flex items-center justify-end gap-10 lg:flex-1">
           <a
-            href="tel:+11245678900"
+            href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
             className="hidden items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-4 text-base font-bold text-white shadow-[0_16px_40px_rgba(255,111,36,0.4)] transition hover:bg-[var(--color-accent-strong)] lg:inline-flex"
           >
             <PhoneIcon className="h-4 w-4" />
-            <span>(124) 567 8900</span>
+            <span>{siteConfig.phone}</span>
           </a>
         </div>
 
@@ -106,11 +106,11 @@ export function Navbar() {
           </ul>
 
           <a
-            href="tel:+11245678900"
+            href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
             className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--color-accent)] px-6 py-4 text-base font-bold text-white"
           >
             <PhoneIcon className="h-4 w-4" />
-            <span>(124) 567 8900</span>
+            <span>{siteConfig.phone}</span>
           </a>
         </div>
       ) : null}

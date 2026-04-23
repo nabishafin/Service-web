@@ -1,9 +1,10 @@
 "use client";
 
 import { WhatsAppIcon } from "@/components/ui/Icons";
+import { siteConfig } from "@/lib/site-data";
 
 export function WhatsAppButton() {
-  const whatsappNumber = "1245678900"; // Replace with your actual number
+  const whatsappNumber = siteConfig.whatsapp; // Pulled from centralized config
   const message = "Hello! I'm interested in your services.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

@@ -8,7 +8,9 @@ export function SmoothScroll({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    // Also try setting document body to top just in case
+    document.documentElement.scrollTop = 0;
   }, [pathname]);
 
   return (

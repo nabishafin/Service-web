@@ -26,9 +26,12 @@ export const metadata = {
   },
 };
 
+import { ForceScrollToTop } from "@/components/ui/ForceScrollToTop";
+
 export default function ServicesPage() {
   return (
     <main>
+      <ForceScrollToTop />
       <ServicesHeroSection />
       <ServicesGridSection />
       <WhyChooseUsSection />

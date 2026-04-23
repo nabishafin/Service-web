@@ -56,6 +56,7 @@ export function ServicesSection() {
           
           <Link
             href="/services"
+            onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
             className="inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-10 text-lg font-bold text-white shadow-[0_12px_24px_rgba(255,111,36,0.2)] transition-all hover:bg-[var(--color-accent-strong)] hover:shadow-[0_15px_30px_rgba(255,111,36,0.3)] active:scale-95"
           >
             View All Services
@@ -143,6 +144,7 @@ export function ServicesSection() {
                   </p>
                   <Link
                     href={`/services/${activeService.id}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
                     className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-[var(--color-accent)] px-10 text-lg font-bold text-white shadow-lg transition-all hover:bg-[var(--color-accent-strong)] hover:shadow-[var(--color-accent)]/40 active:scale-95"
                   >
                     Explore Service Details

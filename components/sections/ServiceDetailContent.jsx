@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ChevronDownIcon, CheckIcon, PhoneIcon, WhatsAppIcon } from "@/components/ui/Icons";
 import { serviceItems } from "@/lib/services-data";
+import { siteConfig } from "@/lib/site-data";
 
 const faqs = [
   {
@@ -239,14 +240,14 @@ export function ServiceDetailContent({ service }) {
               <p className="mt-2 text-white/80 text-sm">Our team is available 24/7 for emergency requests.</p>
               
               <div className="mt-6 space-y-4">
-                <a href="tel:+11245678900" className="flex items-center gap-3 text-lg font-black transition-transform hover:scale-105">
+                <a href={`tel:${siteConfig.emergencyPhone.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-lg font-black transition-transform hover:scale-105">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[var(--color-accent)]">
                     <PhoneIcon className="h-5 w-5" />
                   </div>
-                  (124) 567 8900
+                  {siteConfig.emergencyPhone}
                 </a>
                 
-                <a href="https://wa.me/1245678900" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-lg font-black transition-transform hover:scale-105">
+                <a href={`https://wa.me/${siteConfig.whatsapp}?text=Hello! I'm interested in your services.`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-lg font-black transition-transform hover:scale-105">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white">
                     <WhatsAppIcon className="h-6 w-6" />
                   </div>

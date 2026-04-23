@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-data";
 import { LogoMark } from "@/components/ui/LogoMark";
 import {
   FacebookIcon,
@@ -25,11 +26,11 @@ export function Footer() {
               Get Professional Cleaning & Hospitality Help — Call Today!
             </h2>
             <a
-              href="tel:+11245678900"
+              href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
               className="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-[var(--color-accent)] px-8 text-lg font-bold text-white shadow-[0_12px_24px_rgba(255,96,23,0.3)] transition hover:bg-[var(--color-accent-strong)]"
             >
               <PhoneIcon className="h-5 w-5" />
-              <span>(124) 567 8900</span>
+              <span>{siteConfig.phone}</span>
             </a>
           </div>
         </div>
@@ -49,16 +50,16 @@ export function Footer() {
                 ServiceFlow provides top-quality cleaning and hospitality services, from deep cleaning to event staffing by certified professionals.
               </p>
               <div className="flex items-center gap-4">
-                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
+                <a href={siteConfig.socials.facebook} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
                   <FacebookIcon className="h-5 w-5" />
                 </a>
-                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
+                <a href={siteConfig.socials.instagram} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
                   <InstagramIcon className="h-5 w-5" />
                 </a>
-                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
+                <a href={siteConfig.socials.twitter} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
                   <TwitterIcon className="h-5 w-5" />
                 </a>
-                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
+                <a href={siteConfig.socials.youtube} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10 hover:text-[#ff6017]">
                   <YouTubeIcon className="h-5 w-5" />
                 </a>
               </div>
@@ -70,8 +71,7 @@ export function Footer() {
               <ul className="space-y-4 text-base font-medium text-gray-400">
                 <li><Link href="/" className="transition hover:text-white">Home</Link></li>
                 <li><Link href="/services" className="transition hover:text-white">Services</Link></li>
-                <li><Link href="#contact" className="transition hover:text-white">Contact Us</Link></li>
-                <li><Link href="/404" className="transition hover:text-white">404</Link></li>
+                <li><Link href="/contact" className="transition hover:text-white">Contact Us</Link></li>
               </ul>
             </div>
 
@@ -79,10 +79,10 @@ export function Footer() {
             <div>
               <h3 className="mb-8 text-lg font-bold text-white">Service Areas</h3>
               <ul className="space-y-4 text-base font-medium text-gray-400">
-                <li><Link href="#" className="transition hover:text-white">Emergency Plumbing</Link></li>
-                <li><Link href="#" className="transition hover:text-white">Pipe Repair</Link></li>
-                <li><Link href="#" className="transition hover:text-white">Drain Cleaning</Link></li>
-                <li><Link href="#" className="transition hover:text-white">Leak Detection</Link></li>
+                <li><Link href="/services/house-cleaning" className="transition hover:text-white">House Cleaning</Link></li>
+                <li><Link href="/services/office-cleaning" className="transition hover:text-white">Office Cleaning</Link></li>
+                <li><Link href="/services/waiter-waitress" className="transition hover:text-white">Hospitality Staffing</Link></li>
+                <li><Link href="/services/outside-catering" className="transition hover:text-white">Catering & Chef</Link></li>
               </ul>
             </div>
 
@@ -92,15 +92,15 @@ export function Footer() {
               <ul className="space-y-6 text-base font-medium text-gray-400">
                 <li className="flex gap-4">
                   <MapPinIcon className="h-6 w-6 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
-                  <span>123 Main Street, Your City, State, ZIP</span>
+                  <span>{siteConfig.address}</span>
                 </li>
                 <li className="flex gap-4">
                   <MailIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
-                  <a href="mailto:contact@plumbflow.com" className="transition hover:text-white">contact@plumbflow.com</a>
+                  <a href={`mailto:${siteConfig.email}`} className="transition hover:text-white">{siteConfig.email}</a>
                 </li>
                 <li className="flex gap-4">
                   <PhoneIcon className="h-5 w-5 shrink-0 text-[var(--color-accent)]" aria-hidden="true" />
-                  <a href="tel:+11245678900" className="transition hover:text-white">(124) 567 8900</a>
+                  <a href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`} className="transition hover:text-white">{siteConfig.phone}</a>
                 </li>
               </ul>
             </address>
@@ -112,7 +112,7 @@ export function Footer() {
       <div className="border-t border-white/5 py-8">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
           <p className="text-center text-sm font-medium text-gray-500 md:text-left">
-            &copy; {currentYear} Plumbflow. All Rights Reserved.
+            &copy; {currentYear} ServiceFlow. All Rights Reserved.
           </p>
         </div>
       </div>

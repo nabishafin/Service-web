@@ -20,11 +20,11 @@ export function ServicesHeroSection() {
       {/* Content */}
       <div className="relative mx-auto flex min-h-[340px] w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12">
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-white/60">
+        {/* <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-white/60">
           <Link href="/" className="transition hover:text-white">Home</Link>
           <span className="text-white/30">/</span>
           <span className="text-[var(--color-accent)]">Services</span>
-        </nav>
+        </nav> */}
 
         {/* Eyebrow */}
         <p className="text-[0.8rem] font-bold uppercase tracking-[0.22em] text-[var(--color-accent)]">
