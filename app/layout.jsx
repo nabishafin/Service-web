@@ -1,19 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata = {
@@ -43,9 +41,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${roboto.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Toaster position="top-center" reverseOrder={false} />
         <header>
           <TopBar />
           <Navbar />

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PhoneIcon, MailIcon, MapPinIcon } from "@/components/ui/Icons";
 import { serviceItems } from "@/lib/services-data";
 import { siteConfig } from "@/lib/site-data";
+import { toast } from "react-hot-toast";
 
 function ClockIcon({ className = "" }) {
   return (
@@ -31,8 +32,7 @@ export function ContactPageContent() {
     service: "",
     message: ""
   });
-  const [status, setStatus] = useState("idle"); // "idle" | "loading" | "success" | "error"
-  const [errorMessage, setErrorMessage] = useState("");
+  const [status, setStatus] = useState("idle"); // "idle" | "loading"
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -41,7 +41,7 @@ export function ContactPageContent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
-    setErrorMessage("");
+    const toastId = toast.loading("Sending your message...");
 
     try {
       const res = await fetch("/api/contact", {
@@ -55,15 +55,13 @@ export function ContactPageContent() {
         throw new Error(errorData.error || "Failed to send message.");
       }
 
-      setStatus("success");
+      toast.success("Message sent successfully!", { id: toastId });
+      setStatus("idle");
       setFormData({ firstName: "", lastName: "", email: "", service: "", message: "" });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setStatus("idle"), 5000);
     } catch (err) {
       console.error(err);
-      setStatus("error");
-      setErrorMessage(err.message);
+      toast.error(err.message || "Failed to send message. Please try again.", { id: toastId });
+      setStatus("idle");
     }
   };
 
@@ -101,7 +99,7 @@ export function ContactPageContent() {
                     onChange={handleChange}
                     required
                     placeholder="John"
-                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm text-[#0f3048] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                   />
                 </div>
                 <div>
@@ -113,7 +111,7 @@ export function ContactPageContent() {
                     onChange={handleChange}
                     required
                     placeholder="Doe"
-                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm text-[#0f3048] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                   />
                 </div>
               </div>
@@ -127,7 +125,7 @@ export function ContactPageContent() {
                   onChange={handleChange}
                   required
                   placeholder="john@example.com"
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm text-[#0f3048] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                 />
               </div>
 
@@ -137,7 +135,7 @@ export function ContactPageContent() {
                   id="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm text-[#526677] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm text-[#0f3048] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                 >
                   <option value="">Select a service...</option>
                   {serviceItems.map((service) => (
@@ -158,16 +156,9 @@ export function ContactPageContent() {
                   required
                   rows={5}
                   placeholder="How can we help you?"
-                  className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-5 py-4 text-sm outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-5 py-4 text-sm text-[#0f3048] outline-none transition focus:border-[var(--color-accent)] focus:bg-white focus:ring-1 focus:ring-[var(--color-accent)]"
                 ></textarea>
               </div>
-
-              {status === "error" && (
-                <p className="text-sm font-semibold text-red-500">{errorMessage}</p>
-              )}
-              {status === "success" && (
-                <p className="text-sm font-semibold text-green-600">Your message has been sent successfully!</p>
-              )}
 
               <button
                 type="submit"
