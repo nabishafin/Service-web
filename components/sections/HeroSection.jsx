@@ -144,13 +144,13 @@ export function HeroSection() {
             {/* CTA Buttons — stacked on mobile, row on sm+ */}
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-7 py-3 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,111,36,0.3)] transition hover:bg-[var(--color-accent-strong)] sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Get a Free Quote
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/60 bg-white/5 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/10 sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Contact Us Today
@@ -191,7 +191,7 @@ export function HeroSection() {
               {/* Count */}
               <div className="min-w-0 pr-8 sm:pr-10">
                 <p className="text-[1.2rem] font-extrabold leading-none tracking-[-0.02em] text-white sm:text-[1.4rem]">
-                  130K +
+                  500 +
                 </p>
                 <p className="mt-1.5 text-[0.7rem] font-semibold leading-none text-white/90 sm:text-[0.8rem]">
                   Customer Reviews

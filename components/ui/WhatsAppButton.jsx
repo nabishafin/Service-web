@@ -19,7 +19,7 @@ export function WhatsAppButton() {
       <WhatsAppIcon className="h-9 w-9" />
       
       {/* Tooltip */}
-      <span className="absolute right-20 whitespace-nowrap rounded-lg bg-white px-4 py-2 text-sm font-bold text-[#0f3048] shadow-xl opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none border border-gray-100">
+      <span className="absolute right-20 whitespace-nowrap rounded-lg bg-white px-4 py-2 text-sm font-bold text-[#0f3048] shadow-xl opacity-0 lg:opacity-100 transition-opacity group-hover:opacity-100 pointer-events-none border border-gray-100">
         Chat with us!
       </span>
     </a>
