@@ -18,7 +18,7 @@ export function ServicesHeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,96,23,0.08),transparent_65%)]" />
 
       {/* Content */}
-      <div className="relative mx-auto flex min-h-[340px] w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12">
+      <div className="relative mx-auto flex min-h-[340px] w-full max-w-7xl flex-col items-center justify-end pb-10 px-6 text-center pt-28 sm:justify-center sm:pb-0 sm:pt-0 sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12">
         {/* Breadcrumb */}
         {/* <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm font-medium text-white/60">
           <Link href="/" className="transition hover:text-white">Home</Link>
