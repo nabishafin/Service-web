@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 export function QuickBookingSection() {
   const [formData, setFormData] = useState({
     fullName: "",
     phone: ""
   });
-  const [status, setStatus] = useState("idle"); // "idle" | "loading" | "success" | "error"
+  const [status, setStatus] = useState("idle"); // "idle" | "loading"
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,31 +20,31 @@ export function QuickBookingSection() {
     if (!formData.fullName || !formData.phone) return;
 
     setStatus("loading");
+    const toastId = toast.loading("Sending your request...");
 
     try {
-      // We'll reuse our existing contact API
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           firstName: formData.fullName,
-          lastName: "(Quick Booking)",
-          email: "no-email@provided.com",
           service: "Quick Call Back Request",
           message: `User requested a quick callback. Phone: ${formData.phone}`
         })
       });
 
       if (response.ok) {
-        setStatus("success");
+        toast.success("Request sent! We will call you back soon.", { id: toastId });
+        setStatus("idle");
         setFormData({ fullName: "", phone: "" });
-        setTimeout(() => setStatus("idle"), 5000);
       } else {
-        setStatus("error");
+        toast.error("Something went wrong. Please try again.", { id: toastId });
+        setStatus("idle");
       }
     } catch (error) {
       console.error("Quick booking error:", error);
-      setStatus("error");
+      toast.error("Failed to send request. Please try again.", { id: toastId });
+      setStatus("idle");
     }
   };
 
@@ -57,12 +58,6 @@ export function QuickBookingSection() {
               <h2 className="text-[1.5rem] font-extrabold leading-[1.15] tracking-tight text-[#18344f] sm:text-[1.75rem] lg:text-3xl">
                 Professional Service Booked in 60 Seconds
               </h2>
-              {status === "success" && (
-                <p className="mt-2 text-sm font-bold text-green-600">Request sent! We will call you back soon.</p>
-              )}
-              {status === "error" && (
-                <p className="mt-2 text-sm font-bold text-red-500">Something went wrong. Please try again.</p>
-              )}
             </div>
 
             {/* Form */}

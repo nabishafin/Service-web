@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    service: "",
     message: ""
   });
   const [status, setStatus] = useState("idle");
@@ -20,6 +20,7 @@ export function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
+    const toastId = toast.loading("Sending your message...");
 
     try {
       const res = await fetch("/api/contact", {
@@ -27,23 +28,23 @@ export function ContactSection() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           firstName: formData.fullName,
-          lastName: "(Home Section)",
           email: formData.email,
-          service: formData.service || "General Inquiry",
           message: `Phone: ${formData.phone}\n\n${formData.message}`
         })
       });
 
       if (res.ok) {
-        setStatus("success");
-        setFormData({ fullName: "", email: "", phone: "", service: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000);
+        toast.success("Message sent successfully!", { id: toastId });
+        setStatus("idle");
+        setFormData({ fullName: "", email: "", phone: "", message: "" });
       } else {
-        setStatus("error");
+        toast.error("Failed to send message. Please try again.", { id: toastId });
+        setStatus("idle");
       }
     } catch (err) {
       console.error(err);
-      setStatus("error");
+      toast.error("An error occurred. Please try again.", { id: toastId });
+      setStatus("idle");
     }
   };
 
@@ -92,13 +93,6 @@ export function ContactSection() {
                 Get in Touch with Us
               </h3>
 
-              {status === "success" && (
-                <p className="mt-4 text-center text-sm font-bold text-green-600">Message sent successfully!</p>
-              )}
-              {status === "error" && (
-                <p className="mt-4 text-center text-sm font-bold text-red-500">Failed to send message. Please try again.</p>
-              )}
-
               <form onSubmit={handleSubmit} className="mt-7 flex flex-col gap-3 sm:gap-4">
                 <input
                   type="text"
@@ -127,14 +121,7 @@ export function ContactSection() {
                   placeholder="Phone number"
                   className="w-full rounded-full border border-[#e2e8f0] bg-[#f8fafc] px-5 py-3 text-sm text-[#18344f] outline-none transition focus:border-[#94a3b8] focus:ring-1 focus:ring-[#94a3b8] placeholder:text-[#94a3b8] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
                 />
-                <input
-                  type="text"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  placeholder="Service required"
-                  className="w-full rounded-full border border-[#e2e8f0] bg-[#f8fafc] px-5 py-3 text-sm text-[#18344f] outline-none transition focus:border-[#94a3b8] focus:ring-1 focus:ring-[#94a3b8] placeholder:text-[#94a3b8] sm:px-6 sm:py-3.5 sm:text-[0.95rem]"
-                />
+
                 <textarea
                   name="message"
                   value={formData.message}

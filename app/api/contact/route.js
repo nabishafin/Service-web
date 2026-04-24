@@ -6,9 +6,9 @@ export async function POST(request) {
     const { firstName, lastName, email, service, message } = await request.json();
 
     // Basic validation
-    if (!firstName || !lastName || !email || !message) {
+    if (!firstName || !message) {
       return NextResponse.json(
-        { error: "Please fill in all required fields." },
+        { error: "Please fill in all required fields (Name and Message)." },
         { status: 400 }
       );
     }
@@ -35,18 +35,22 @@ export async function POST(request) {
 
     // Email content
     const mailOptions = {
-      from: `"${firstName} ${lastName}" <${EMAIL_USER}>`, // Sender address (must be the authenticated user for Gmail, but we set the "name")
-      to: CONTACT_RECEIVER || EMAIL_USER, // Receiver
-      replyTo: email, // If we click 'reply', it goes to the user who filled the form
+      from: `"${firstName}${lastName ? " " + lastName : ""}" <${EMAIL_USER}>`,
+      to: CONTACT_RECEIVER || EMAIL_USER,
+      ...(email && { replyTo: email }),
       subject: `New Contact Form Submission: ${service || "General Inquiry"}`,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Service Requested:</strong> ${service || "Not specified"}</p>
-        <hr />
-        <h3>Message:</h3>
-        <p>${message.replace(/\n/g, "<br>")}</p>
+        <div style="font-family: sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #0f3048; border-bottom: 2px solid #ff6017; padding-bottom: 10px;">New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${firstName}${lastName ? " " + lastName : ""}</p>
+          ${email ? `<p><strong>Email:</strong> ${email}</p>` : ""}
+          <p><strong>Service Requested:</strong> ${service || "Not specified"}</p>
+          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+          <h3 style="color: #0f3048;">Message:</h3>
+          <div style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
+            ${message.replace(/\n/g, "<br>")}
+          </div>
+        </div>
       `,
     };
 

@@ -49,7 +49,6 @@ export function Navbar() {
           ? "bg-[var(--color-navy)] shadow-[0_14px_32px_rgba(8,17,29,0.18)]"
           : "bg-transparent"
       }`}
-      onMouseLeave={() => setActiveDropdown(null)}
     >
       <nav className="mx-auto h-[76px] w-full">
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -59,25 +58,28 @@ export function Navbar() {
               <span className="text-2xl font-extrabold tracking-tight">ServiceFlow</span>
             </Link>
           </div>
-
+ 
           <ul className="hidden items-center gap-8 text-sm font-semibold text-white/90 lg:flex">
             {navigationItems.map((item) => (
-              <li 
-                key={item.label} 
-                className="relative"
-                onMouseEnter={() => item.hasDropdown ? setActiveDropdown(item.label) : null}
-              >
-                <a 
-                  href={item.href} 
-                  className={`inline-flex items-center gap-1 transition-all duration-200 py-7 ${
-                    activeDropdown === item.label ? "text-white" : "hover:text-white"
-                  }`}
-                >
-                  <span>{item.label}</span>
-                  {item.hasDropdown ? (
+              <li key={item.label} className="relative">
+                {item.hasDropdown ? (
+                  <button 
+                    onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                    className={`inline-flex items-center gap-1 transition-all duration-200 py-7 cursor-pointer border-none bg-transparent font-semibold ${
+                      activeDropdown === item.label ? "text-white" : "text-white/90 hover:text-white"
+                    }`}
+                  >
+                    <span>{item.label}</span>
                     <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === item.label ? "rotate-180" : ""}`} />
-                  ) : null}
-                </a>
+                  </button>
+                ) : (
+                  <Link 
+                    href={item.href}
+                    className="inline-flex items-center transition-all duration-200 py-7 text-white/90 hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

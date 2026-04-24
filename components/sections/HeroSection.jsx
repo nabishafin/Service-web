@@ -98,7 +98,7 @@ export function HeroSection() {
         alt="Professional cleaning service"
         fill
         priority
-        className="object-cover object-[right_top]"
+        className="object-cover object-[70%_20%] sm:object-[right_top]"
       />
 
       {/* Gradient overlays */}

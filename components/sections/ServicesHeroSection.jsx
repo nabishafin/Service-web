@@ -10,7 +10,7 @@ export function ServicesHeroSection() {
         alt="Professional cleaning and hospitality services"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[70%_center] sm:object-center"
       />
 
       {/* Gradient overlays */}
