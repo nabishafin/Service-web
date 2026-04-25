@@ -80,7 +80,7 @@ export function AboutSection() {
   return (
     <section id="about" ref={sectionRef} className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:items-stretch lg:gap-14">
           <div className="overflow-hidden rounded-2xl bg-[#eef2f7]">
             <Image
               key={activeContent.id}
@@ -135,6 +135,13 @@ export function AboutSection() {
                 </li>
               ))}
             </ul>
+
+            <a
+              href="/contact"
+              className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-8 py-3.5 text-base font-bold text-white shadow-[0_16px_40px_rgba(255,111,36,0.3)] transition hover:bg-[var(--color-accent-strong)]"
+            >
+              Contact With Us
+            </a>
           </div>
         </div>
 
