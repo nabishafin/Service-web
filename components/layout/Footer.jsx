@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-data";
-import { LogoMark } from "@/components/ui/LogoMark";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -42,9 +42,14 @@ export function Footer() {
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
             {/* Brand column */}
             <div className="flex flex-col gap-6">
-              <Link href="/" className="flex items-center gap-3 text-white">
-                <LogoMark />
-                <span className="text-3xl font-extrabold tracking-tight">ServiceFlow</span>
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/Logo.svg"
+                  alt="ServiceFlow"
+                  width={220}
+                  height={43}
+                  className="h-11 w-auto object-contain"
+                />
               </Link>
               <p className="max-w-xs text-base leading-relaxed text-gray-400">
                 ServiceFlow provides top-quality cleaning and hospitality services, from deep cleaning to event staffing by certified professionals.

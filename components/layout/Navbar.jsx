@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { navigationItems, siteConfig } from "@/lib/site-data";
 import { serviceItems } from "@/lib/services-data";
 import { ChevronDownIcon, CloseIcon, MenuIcon, PhoneIcon } from "@/components/ui/Icons";
-import { LogoMark } from "@/components/ui/LogoMark";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,9 +53,15 @@ export function Navbar() {
       <nav className="mx-auto h-[76px] w-full">
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex lg:flex-1">
-            <Link href="/" className="flex items-center gap-3 text-white">
-              <LogoMark />
-              <span className="text-2xl font-extrabold tracking-tight">ServiceFlow</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/Logo.svg"
+                alt="ServiceFlow"
+                width={180}
+                height={36}
+                priority
+                className="h-12 w-auto object-contain"
+              />
             </Link>
           </div>
  
