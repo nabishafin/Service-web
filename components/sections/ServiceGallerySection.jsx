@@ -5,32 +5,32 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    title: "Commercial Pipe Replacement",
-    src: "/images/1zYVz9QJc5BOeqL5dB0N8o8SDoc.png",
+    title: "Professional Deep Cleaning",
+    src: "/images/Deep-Cleaning.jpg",
     className: "md:col-span-4 md:row-span-2",
   },
   {
     id: 2,
-    title: "Residential Drain Cleaning",
-    src: "/images/Kj6Jy6kSwel2ONNzgeIEtYtHxk.png",
+    title: "Office & Commercial Cleaning",
+    src: "/images/office-cleaning.jpg",
     className: "md:col-span-5 md:row-span-1",
   },
   {
     id: 3,
-    title: "Water Heater Installation",
-    src: "/images/0uxFc4M6TuuW1docugfKFJfHK0.png",
+    title: "Hospitality & Waiter Services",
+    src: "/images/waiter-service.jpeg",
     className: "md:col-span-3 md:row-span-1",
   },
   {
     id: 4,
-    title: "Leak Detection & Repair",
-    src: "/images/qc4QPjkmjedX6S8OZe0g3xmBc.png",
+    title: "Outside Catering & Chef",
+    src: "/images/outside-catering.jpg",
     className: "md:col-span-3 md:row-span-1",
   },
   {
     id: 5,
-    title: "Emergency Flood Response",
-    src: "/images/ELqUVtmLoVs21G0mJIEepivQq8M.png",
+    title: "Building & Facility Cleaning",
+    src: "/images/building-cleaning.jpg",
     className: "md:col-span-5 md:row-span-1",
   },
 ];
@@ -41,10 +41,10 @@ export function ServiceGallerySection() {
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            Recent Projects
+            Our Work
           </p>
           <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[#18344f] sm:text-[2.5rem] lg:text-[3.25rem]">
-            Quality Workmanship in Every Installation
+            Excellence in Every Service We Deliver
           </h2>
         </div>
 
